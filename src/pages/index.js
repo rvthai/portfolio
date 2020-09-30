@@ -1,5 +1,14 @@
 import React from "react"
 
-export default function Home() {
-  return <div>Hello world!</div>
+// Components
+import Header from "../components/header"
+
+function Main() {
+  return (
+    <div>
+      <Header />
+    </div>
+  )
 }
+
+export default Main
