@@ -1,0 +1,31 @@
+$greencolor: #68e8c7;
+$font: "Oxygen Mono";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 3rem;
+}
+
+.links {
+  color: $greencolor;
+  font-family: $font;
+  display: flex;
+}
+
+.resume {
+  outline: none;
+  border: solid 1px $greencolor;
+  color: $greencolor;
+  font-family: $font;
+  background: none;
+  margin: auto 1rem;
+  padding: 0.5rem;
+}
+
+.link {
+  color: #e6e6e6;
+  font-family: $font;
+  text-decoration: none;
+  margin: auto 1rem;
+}

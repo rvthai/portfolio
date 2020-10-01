@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Oxygen Mono";
+  src: url(../fonts/OxygenMono-Regular.ttf);
+}
+
+html {
+  background-color: #0d1b2a;
+  color: white;
+  scroll-behavior: smooth;
+}
