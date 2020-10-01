@@ -1,0 +1,50 @@
+/* CSS Variables */
+$kreonfont: "Kreon Bold";
+$font: "Oxygen Mono";
+$kreon: "Kreon";
+$slatecolor: #68808d;
+$greencolor: #68e8c7;
+$opensans: "Open Sans";
+$orangecolor: #fdb035;
+$graycolor: #accdd7;
+
+/* CSS rules */
+.hero {
+  max-width: 1200px;
+  margin: 15rem auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting {
+  font-family: $font;
+  font-size: 24px;
+  color: $orangecolor;
+}
+
+.name {
+  font-family: "Kreon bold";
+  color: #ffffff;
+  font-size: 90px;
+  letter-spacing: 0.3rem;
+}
+
+.descriptionContainer {
+  width: 650px;
+}
+
+.subheading {
+  font-family: "Kreon bold";
+  font-size: 90px;
+  color: $graycolor;
+  letter-spacing: 0.3rem;
+}
+
+.description {
+  font-family: "Open Sans";
+  color: $graycolor;
+  font-size: 30px;
+}

@@ -1,0 +1,27 @@
+$darkbluecolor: #0d1b2a;
+$darkcolor: #212121;
+
+@font-face {
+  font-family: "Oxygen Mono";
+  src: url(../fonts/OxygenMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Kreon";
+  src: url(../fonts/Kreon-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Kreon Bold";
+  src: url(../fonts/Kreon-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+html {
+  background-color: $darkcolor;
+  scroll-behavior: smooth;
+}

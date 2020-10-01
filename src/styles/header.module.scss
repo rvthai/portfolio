@@ -1,5 +1,9 @@
 $greencolor: #68e8c7;
+$slatecolor: #68808d;
+$orangecolor: #f1bb52;
 $font: "Oxygen Mono";
+$openfont: "Open Sans";
+$kreonfont: "Kreon";
 
 .header {
   display: flex;
@@ -8,15 +12,13 @@ $font: "Oxygen Mono";
 }
 
 .links {
-  color: $greencolor;
-  font-family: $font;
   display: flex;
 }
 
 .resume {
   outline: none;
-  border: solid 1px $greencolor;
-  color: $greencolor;
+  border: solid 1px $orangecolor;
+  color: $orangecolor;
   font-family: $font;
   background: none;
   margin: auto 1rem;
@@ -24,8 +26,14 @@ $font: "Oxygen Mono";
 }
 
 .link {
-  color: #e6e6e6;
+  color: #b9cac9;
   font-family: $font;
   text-decoration: none;
   margin: auto 1rem;
+  transition: all 0.3s;
+}
+
+.link:hover {
+  color: $orangecolor;
+  transition: all 0.3s;
 }

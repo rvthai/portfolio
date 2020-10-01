@@ -7,7 +7,8 @@ import Logo from "../images/logo.png"
 function Header() {
   return (
     <div className={styles.header}>
-      <img src={Logo} alt="logo" width="50" />
+      {/* <img src={Logo} alt="logo" width="50" /> */}
+      <div className={styles.resume}>Logo</div>
       <div className={styles.links}>
         <Link className={styles.link} to="/#about">
           About
