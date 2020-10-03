@@ -1,6 +1,6 @@
 // Variables
 $gunmetal: #212121;
-
+$orange: #f1bb52;
 $fs-sm: 12px;
 $fs-sm: 14px;
 $fs-md: 16px;
@@ -35,6 +35,10 @@ $fs-xl: 20px;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $gunmetal;
   font-family: "Open Sans";
@@ -46,5 +50,33 @@ main {
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
-  padding: 200px 150px;
+  padding: 0px 150px;
+}
+
+.button {
+  color: $orange;
+  font-family: "Oxygen Mono";
+  font-size: 14px;
+  padding: 20px 40px;
+  border: solid 1px $orange;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 1080px) {
+  .main {
+    padding: 0px 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 0px 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main {
+    padding: 0px 25px;
+  }
 }
