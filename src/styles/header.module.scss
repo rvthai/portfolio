@@ -1,39 +1,83 @@
-$greencolor: #68e8c7;
-$slatecolor: #68808d;
-$orangecolor: #f1bb52;
+// Variables
+$orange: #f1bb52;
 $font: "Oxygen Mono";
 $openfont: "Open Sans";
 $kreonfont: "Kreon";
+$light-slate: #b9cac9;
+
+.container {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 0 50px;
+}
 
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 3rem 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  cursor: pointer;
 }
 
 .links {
   display: flex;
 }
 
-.resume {
-  outline: none;
-  border: solid 1px $orangecolor;
-  color: $orangecolor;
+.link {
+  color: $light-slate;
   font-family: $font;
-  background: none;
-  margin: auto 1rem;
-  padding: 0.5rem;
+  font-size: 14px;
+  margin: auto;
+  padding: 0 15px;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
-.link {
-  color: #b9cac9;
+.resume {
+  padding: 0 15px;
+}
+
+.button {
+  color: $orange;
   font-family: $font;
-  text-decoration: none;
-  margin: auto 1rem;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: solid 1px $orange;
+  outline: none;
+  background: none;
+  cursor: pointer;
   transition: all 0.3s;
 }
 
 .link:hover {
-  color: $orangecolor;
+  color: $orange;
   transition: all 0.3s;
+}
+
+.button:hover {
+  background: rgba(241, 188, 82, 0.2);
+  transition: all 0.3s;
+}
+
+.hamburger {
+  display: none;
+  color: $orange;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .hamburger {
+    display: inline-block;
+  }
+
+  .links {
+    display: none;
+  }
 }

@@ -1,11 +1,13 @@
-$darkbluecolor: #0d1b2a;
-$darkcolor: #212121;
+// Variables
+$gunmetal: #212121;
 
-@font-face {
-  font-family: "Oxygen Mono";
-  src: url(../fonts/OxygenMono-Regular.ttf);
-}
+$fs-sm: 12px;
+$fs-sm: 14px;
+$fs-md: 16px;
+$fs-lg: 18px;
+$fs-xl: 20px;
 
+// Fonts
 @font-face {
   font-family: "Kreon";
   src: url(../fonts/Kreon-Regular.ttf);
@@ -17,11 +19,32 @@ $darkcolor: #212121;
 }
 
 @font-face {
+  font-family: "Oxygen Mono";
+  src: url(../fonts/OxygenMono-Regular.ttf);
+}
+
+@font-face {
   font-family: "Open Sans";
   src: url(../fonts/OpenSans-Regular.ttf);
 }
 
-html {
-  background-color: $darkcolor;
-  scroll-behavior: smooth;
+// Global CSS rules
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $gunmetal;
+  font-family: "Open Sans";
+  font-size: $fs-lg;
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  padding: 200px 150px;
 }

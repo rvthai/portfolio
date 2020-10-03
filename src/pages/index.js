@@ -14,14 +14,16 @@ function Main() {
   return (
     <div>
       <Header />
-      <Hero />
-      <Layout>
+      <div className="main">
+        <Hero />
+      </div>
+      {/* <Layout>
         <About />
         <Experience />
         <Projects />
         <Contact />
       </Layout>
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }

@@ -1,17 +1,26 @@
-/* CSS Variables */
+// Variables
 $kreonfont: "Kreon Bold";
 $font: "Oxygen Mono";
 $kreon: "Kreon";
-$slatecolor: #68808d;
-$greencolor: #68e8c7;
 $opensans: "Open Sans";
-$orangecolor: #fdb035;
+$ascent-color: #f1bb52;
 $graycolor: #accdd7;
 
 /* CSS rules */
+.wrapper {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
 .hero {
-  max-width: 1200px;
-  margin: 15rem auto;
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 1000px;
 }
 
 .content {
@@ -21,24 +30,20 @@ $graycolor: #accdd7;
 
 .greeting {
   font-family: $font;
-  font-size: 24px;
-  color: $orangecolor;
+  font-size: clamp(12px, 5vw, 14px);
+  color: $ascent-color;
 }
 
 .name {
   font-family: "Kreon bold";
   color: #ffffff;
-  font-size: 90px;
+  font-size: clamp(40px, 8vw, 80px);
   letter-spacing: 0.3rem;
-}
-
-.descriptionContainer {
-  width: 650px;
 }
 
 .subheading {
   font-family: "Kreon bold";
-  font-size: 90px;
+  font-size: clamp(40px, 8vw, 80px);
   color: $graycolor;
   letter-spacing: 0.3rem;
 }
@@ -46,5 +51,24 @@ $graycolor: #accdd7;
 .description {
   font-family: "Open Sans";
   color: $graycolor;
-  font-size: 30px;
+  margin: 20px 0 0;
+  max-width: 500px;
+}
+
+.icons {
+  margin: 3rem 0;
+  display: flex;
+  max-width: 300px;
+  justify-content: space-between;
+}
+
+.icon {
+  color: #b9cac9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  color: $ascent-color;
+  transition: all 0.3s;
 }
