@@ -1,18 +1,8 @@
 import React from "react"
+import styles from "../styles/layout.module.scss"
 
 function Layout({ children }) {
-  return (
-    <div
-      style={{
-        maxWidth: 900,
-        border: "solid 1px white",
-        padding: "100px 0",
-        margin: "0 auto",
-      }}
-    >
-      {children}
-    </div>
-  )
+  return <div className={styles.layout}>{children}</div>
 }
 
 export default Layout

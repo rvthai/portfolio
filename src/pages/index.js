@@ -16,6 +16,9 @@ function Main() {
       <Header />
       <div className="main">
         <Hero />
+        <Layout>
+          <About />
+        </Layout>
       </div>
       {/* <Layout>
         <About />

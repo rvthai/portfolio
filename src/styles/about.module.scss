@@ -1,0 +1,42 @@
+$orange: #f1bb52;
+.title {
+  color: $orange;
+  font-family: "Oxygen Mono";
+  white-space: nowrap;
+  margin-right: 2rem;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+.hr {
+  border-bottom: solid 1px #b9cac9;
+  width: 40%;
+}
+
+.content {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+}
+
+.text {
+  width: 45%;
+}
+
+.pic {
+  position: absolute;
+  width: 45%;
+}
+
+.overlay {
+  position: absolute;
+  background: red;
+  width: 45%;
+}
+
+.pic:hover {
+  opacity: 0;
+}
