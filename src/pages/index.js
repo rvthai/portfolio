@@ -18,15 +18,11 @@ function Main() {
         <Hero />
         <Layout>
           <About />
+          <Experience />
+          <Projects />
+          <Contact />
         </Layout>
       </div>
-      {/* <Layout>
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </Layout>
-      <Footer /> */}
     </div>
   )
 }

@@ -1,0 +1,29 @@
+$orange: #f1bb52;
+.title {
+  color: $orange;
+  font-family: "Oxygen Mono";
+  white-space: nowrap;
+  margin-right: 1rem;
+  font-size: 24px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  width: 48%;
+}
+
+.hr {
+  border-bottom: solid 1px #b9cac9;
+  width: 100%;
+}
+
+.static {
+  background-image: url("../images/projects/scrappy-cookbook.png");
+  background-image: url("../images/logo.png");
+  width: auto;
+}
+
+.static:hover {
+  background-image: url(../images/projects/scrappy-cookbook.gif);
+}
