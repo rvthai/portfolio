@@ -41,14 +41,11 @@ function Hero() {
         {content.frontmatter.subheading}
       </span>
       <span className={styles.description}>{content.excerpt}</span>
-      {/* <div className={styles.contact}> */}
-      {/* <button className="button">Connect with me</button> */}
       <div className={styles.icons}>
-        <FontAwesomeIcon className={styles.icon} icon={faEnvelope} size="3x" />
+        <FontAwesomeIcon className={styles.icon} icon={faGoogle} size="3x" />
         <FontAwesomeIcon className={styles.icon} icon={faLinkedin} size="3x" />
         <FontAwesomeIcon className={styles.icon} icon={faGithub} size="3x" />
       </div>
-      {/* </div> */}
     </div>
   )
 }

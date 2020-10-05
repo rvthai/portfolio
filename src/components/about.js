@@ -15,7 +15,7 @@ function About() {
       </div>
       <div className={styles.content}>
         <div className={styles.leftside}>
-          <p className={styles.text}>
+          <div className={styles.text}>
             <p style={{ marginBottom: "1rem" }}>
               Hello! My name is Ricky, a software engineer based in San Jose,
               CA. I am a recent graduate from the University of California,
@@ -46,7 +46,7 @@ function About() {
                 <li>GraphQL</li>
               </ul>
             </div>
-          </p>
+          </div>
         </div>
         <div className={styles.rightside}>
           <div className={styles.wrapper}>
