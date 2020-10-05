@@ -1,7 +1,8 @@
 $orange: #f1bb52;
 .title {
-  color: $orange;
-  font-family: "Oxygen Mono";
+  color: white;
+  // font-family: "Oxygen Mono";
+  font-family: "Kreon";
   white-space: nowrap;
   margin-right: 1rem;
   font-size: 24px;
@@ -10,7 +11,8 @@ $orange: #f1bb52;
 .heading {
   display: flex;
   align-items: center;
-  width: 48%;
+  width: 50%;
+  margin-bottom: 2rem;
 }
 
 .hr {

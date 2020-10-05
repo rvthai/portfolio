@@ -9,9 +9,10 @@ $light-slate: #b9cac9;
 $opensans-bold: "Open Sans Bold";
 
 .container {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   padding: 150px 0;
+  // align-items: flex-start;
 }
 
 .title {
@@ -52,7 +53,7 @@ $opensans-bold: "Open Sans Bold";
 }
 
 .company {
-  color: $orange;
+  color: $graycolor;
   font-family: $opensans-bold;
 }
 
@@ -63,4 +64,23 @@ $opensans-bold: "Open Sans Bold";
 
 .position {
   color: $graycolor;
+}
+
+.view {
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow {
+  color: $orange;
+  transition: transform 0.3s;
+}
+
+.view:hover {
+  .arrow {
+    transform: translateX(5px);
+    transition: transform 0.3s;
+  }
+  transition: 0.3s;
 }

@@ -33,6 +33,11 @@ $fs-xl: 20px;
   src: url(../fonts/OpenSans-Bold.ttf);
 }
 
+@font-face {
+  font-family: "Apercu";
+  src: url(../fonts/Apercu-Light.otf);
+}
+
 // Global CSS rules
 * {
   margin: 0;
@@ -46,7 +51,7 @@ html {
 
 body {
   background-color: $gunmetal;
-  font-family: "Open Sans";
+  font-family: "Apercu";
   font-size: $fs-lg;
 }
 
@@ -67,6 +72,13 @@ main {
   outline: none;
   background: none;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  // color: white;
+  // background: $orange;
+  background: rgba(241, 188, 82, 0.2);
   transition: all 0.3s;
 }
 

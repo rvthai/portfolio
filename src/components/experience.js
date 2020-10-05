@@ -1,6 +1,9 @@
 import React from "react"
 import styles from "../styles/experience.module.scss"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+
 function Experience() {
   return (
     <div id="experience" className={styles.container}>
@@ -33,7 +36,11 @@ function Experience() {
           <span className={styles.position}>Junior Software Engineer</span>
         </div>
       </div>
-      <button className="button">View my resume</button>
+      {/* <button className="button">View my resume</button> */}
+      <span className={styles.view}>
+        View my resume{" "}
+        <FontAwesomeIcon className={styles.arrow} icon={faArrowRight} />
+      </span>
     </div>
   )
 }
