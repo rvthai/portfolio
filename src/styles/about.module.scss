@@ -1,9 +1,18 @@
+// Variables
+$kreonfont: "Kreon Bold";
+$oxygen-mono: "Oxygen Mono";
+$kreon: "Kreon";
+$opensans: "Open Sans";
 $orange: #f1bb52;
+$graycolor: #accdd7;
+$light-slate: #b9cac9;
+$opensans-bold: "Open Sans Bold";
+
 .about {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 20rem;
+  padding: 150px 0;
 }
 
 .leftside {
@@ -20,8 +29,9 @@ $orange: #f1bb52;
 }
 
 .title {
-  color: $orange;
-  font-family: "Oxygen Mono";
+  color: white;
+  // font-family: "Oxygen Mono";
+  font-family: "Kreon";
   white-space: nowrap;
   margin-right: 1rem;
   font-size: 24px;
@@ -31,6 +41,7 @@ $orange: #f1bb52;
   display: flex;
   align-items: center;
   width: 48%;
+  margin-bottom: 2rem;
 }
 
 .hr {
@@ -39,7 +50,7 @@ $orange: #f1bb52;
 }
 
 .text {
-  color: white;
+  color: $graycolor;
 }
 
 .wrapper {
@@ -66,4 +77,19 @@ $orange: #f1bb52;
     mix-blend-mode: normal;
   }
   transition: 0.3s;
+}
+
+.lists {
+  display: flex;
+  justify-content: center;
+  // justify-content: space-between;
+}
+
+ul {
+  margin-right: 2rem;
+}
+
+li {
+  font-family: $oxygen-mono;
+  font-size: 14px;
 }

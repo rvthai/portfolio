@@ -1,7 +1,23 @@
+// Variables
+$kreonfont: "Kreon Bold";
+$oxygen-mono: "Oxygen Mono";
+$kreon: "Kreon";
+$opensans: "Open Sans";
 $orange: #f1bb52;
+$graycolor: #accdd7;
+$light-slate: #b9cac9;
+$opensans-bold: "Open Sans Bold";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 150px 0;
+}
+
 .title {
-  color: $orange;
-  font-family: "Oxygen Mono";
+  color: white;
+  // font-family: "Oxygen Mono";
+  font-family: "Kreon";
   white-space: nowrap;
   margin-right: 1rem;
   font-size: 24px;
@@ -10,10 +26,41 @@ $orange: #f1bb52;
 .heading {
   display: flex;
   align-items: center;
-  width: 48%;
+  width: 50%;
+  margin-bottom: 2rem;
 }
 
 .hr {
   border-bottom: solid 1px #b9cac9;
   width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.job {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.line1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company {
+  color: $orange;
+  font-family: $opensans-bold;
+}
+
+.date {
+  color: $graycolor;
+  font-family: $oxygen-mono;
+}
+
+.position {
+  color: $graycolor;
 }

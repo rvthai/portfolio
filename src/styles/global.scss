@@ -28,6 +28,11 @@ $fs-xl: 20px;
   src: url(../fonts/OpenSans-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+
 // Global CSS rules
 * {
   margin: 0;
