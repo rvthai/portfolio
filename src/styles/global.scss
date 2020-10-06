@@ -38,6 +38,11 @@ $fs-xl: 20px;
   src: url(../fonts/Apercu-Light.otf);
 }
 
+@font-face {
+  font-family: "Apercu Bold";
+  src: url(../fonts/Apercu-Bold.otf);
+}
+
 // Global CSS rules
 * {
   margin: 0;
