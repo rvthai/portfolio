@@ -20,8 +20,8 @@ function Main() {
           <About />
           <Experience />
           <Projects />
-          <Contact />
         </Layout>
+        <Contact />
       </div>
     </div>
   )

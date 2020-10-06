@@ -1,7 +1,6 @@
 $orange: #f1bb52;
 
 .projects {
-  padding: 150px 0;
 }
 
 .title {
@@ -94,6 +93,7 @@ $orange: #f1bb52;
 }
 
 .view {
+  margin-top: -100px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -122,21 +122,6 @@ $orange: #f1bb52;
     transition: transform 0.3s;
   }
 }
-
-// .linka:after {
-//   content: "";
-//   display: block;
-//   flex-direction: column;
-//   background-color: white;
-//   width: 0;
-//   height: 2px;
-//   transition: width 0.3s;
-// }
-
-// .linka:hover::after {
-//   width: 100%;
-//   transition: width 0.3s;
-// }
 
 .icons {
   display: flex;

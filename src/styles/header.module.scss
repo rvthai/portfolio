@@ -83,3 +83,18 @@ $light-slate: #b9cac9;
     display: none;
   }
 }
+
+.link:after {
+  content: "";
+  display: block;
+  flex-direction: column;
+  background-color: $orange;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s;
+}
+
+.link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
