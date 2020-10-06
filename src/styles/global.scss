@@ -7,15 +7,36 @@ $fs-md: 16px;
 $fs-lg: 18px;
 $fs-xl: 20px;
 
+// fonts
+// apex bold is for headers
+// apex light is for links
+// oxygen mono is for small details
+// bevietname-light for all general text
+
 // Fonts
 @font-face {
-  font-family: "Kreon";
-  src: url(../fonts/Kreon-Regular.ttf);
+  font-family: "BeVietnam";
+  src: url(../fonts/BeVietnam-Regular.ttf);
 }
 
 @font-face {
-  font-family: "Kreon Bold";
-  src: url(../fonts/Kreon-Bold.ttf);
+  font-family: "BeVietnam Bold";
+  src: url(../fonts/BeVietnam-Bold.ttf);
+}
+
+@font-face {
+  font-family: "BeVietnam Light";
+  src: url(../fonts/BeVietnam-Light.ttf);
+}
+
+@font-face {
+  font-family: "Apex Bold";
+  src: url(../fonts/Apex-Mk3-Medium.otf);
+}
+
+@font-face {
+  font-family: "Apex light";
+  src: url(../fonts/Apex-Mk3-ExtraLight.otf);
 }
 
 @font-face {
@@ -23,24 +44,12 @@ $fs-xl: 20px;
   src: url(../fonts/OxygenMono-Regular.ttf);
 }
 
-@font-face {
-  font-family: "Open Sans";
-  src: url(../fonts/OpenSans-Regular.ttf);
-}
+:root {
+  // Colors
+  --orange: #f1bb52;
 
-@font-face {
-  font-family: "Open Sans Bold";
-  src: url(../fonts/OpenSans-Bold.ttf);
-}
-
-@font-face {
-  font-family: "Apercu";
-  src: url(../fonts/Apercu-Light.otf);
-}
-
-@font-face {
-  font-family: "Apercu Bold";
-  src: url(../fonts/Apercu-Bold.otf);
+  // Fonts
+  --apex-bold: "Apex Bold";
 }
 
 // Global CSS rules
@@ -56,7 +65,7 @@ html {
 
 body {
   background-color: $gunmetal;
-  font-family: "Apercu";
+  font-family: "BeVietnam Light";
   font-size: $fs-lg;
 }
 
@@ -66,6 +75,7 @@ main {
   max-width: 1600px;
   min-height: 100vh;
   padding: 0px 150px;
+  transition: 0.3s;
 }
 
 .button {
@@ -78,6 +88,7 @@ main {
   background: none;
   cursor: pointer;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 .button:hover {
@@ -101,4 +112,25 @@ main {
   .main {
     padding: 0px 25px;
   }
+}
+
+.drawer-enter {
+  // opacity: 0;
+  transform: translateX(100%);
+}
+.drawer-enter-active {
+  // opacity: 1;
+  // transition: opacity 200ms;
+  transform: translateX(0%);
+  transition: transform 0.3s ease-in-out;
+}
+.drawer-exit {
+  // opacity: 1;
+  transform: translateX(0%);
+}
+.drawer-exit-active {
+  // opacity: 0;
+  // transition: opacity 200ms;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
 }

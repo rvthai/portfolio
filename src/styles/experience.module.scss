@@ -18,7 +18,8 @@ $opensans-bold: "Open Sans Bold";
 .title {
   color: white;
   // font-family: "Oxygen Mono";
-  font-family: "Kreon";
+  font-family: var(--apex-bold);
+  letter-spacing: 0.1rem;
   white-space: nowrap;
   margin-right: 1rem;
   font-size: 24px;

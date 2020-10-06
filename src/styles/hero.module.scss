@@ -7,9 +7,13 @@ $opensans-bold: "Open Sans Bold";
 $orange: #f1bb52;
 $graycolor: #accdd7;
 $light-slate: #b9cac9;
+$apexfont: "Apex";
+$apexlight: "Apex light";
+$beviet: "BeVietnam";
+$beviet-bold: "BeVietnam Bold";
+$beviet-light: "BeVietnam Light";
 
 /* CSS rules */
-
 .hero {
   display: flex;
   -webkit-box-pack: center;
@@ -31,21 +35,21 @@ $light-slate: #b9cac9;
 }
 
 .name {
-  font-family: "Kreon bold";
+  font-family: $apexfont;
   color: #ffffff;
   font-size: clamp(40px, 8vw, 80px);
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.3rem;
 }
 
 .subheading {
-  font-family: "Kreon bold";
+  font-family: $apexfont;
   font-size: clamp(40px, 8vw, 80px);
   color: $graycolor;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.3rem;
 }
 
 .description {
-  // font-family: "Open Sans";
+  font-family: $beviet-light;
   color: $light-slate;
   margin: 20px 0 0;
   max-width: 450px;
@@ -56,7 +60,7 @@ $light-slate: #b9cac9;
 .icons {
   margin: 3rem 0;
   display: flex;
-  width: 225px;
+  width: 200px;
   justify-content: space-between;
 }
 

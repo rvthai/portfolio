@@ -42,9 +42,9 @@ function Hero() {
       </span>
       <span className={styles.description}>{content.excerpt}</span>
       <div className={styles.icons}>
-        <FontAwesomeIcon className={styles.icon} icon={faGoogle} size="3x" />
-        <FontAwesomeIcon className={styles.icon} icon={faLinkedin} size="3x" />
-        <FontAwesomeIcon className={styles.icon} icon={faGithub} size="3x" />
+        <FontAwesomeIcon className={styles.icon} icon={faEnvelope} size="2x" />
+        <FontAwesomeIcon className={styles.icon} icon={faLinkedin} size="2x" />
+        <FontAwesomeIcon className={styles.icon} icon={faGithub} size="2x" />
       </div>
     </div>
   )

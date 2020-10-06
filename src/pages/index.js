@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 // Components
 import Header from "../components/header"
@@ -11,6 +11,9 @@ import Footer from "../components/footer"
 import Layout from "../components/layout"
 
 function Main() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div>
       <Header />

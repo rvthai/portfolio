@@ -1,9 +1,18 @@
 // Variables
+// Variables
+$kreonfont: "Kreon Bold";
+$oxygen-mono: "Oxygen Mono";
+$kreon: "Kreon";
+$opensans: "Open Sans";
 $orange: #f1bb52;
-$font: "Oxygen Mono";
-$openfont: "Open Sans";
-$kreonfont: "Kreon";
+$graycolor: #accdd7;
 $light-slate: #b9cac9;
+$opensans-bold: "Open Sans Bold";
+$apexfont: "Apex";
+$apexlight: "Apex light";
+$beviet: "BeVietnam";
+$beviet-bold: "BeVietnam Bold";
+$beviet-light: "BeVietnam Light";
 
 .container {
   position: fixed;
@@ -28,13 +37,18 @@ $light-slate: #b9cac9;
   cursor: pointer;
 }
 
+.pic {
+  display: block;
+}
+
 .links {
   display: flex;
 }
 
 .link {
   color: $light-slate;
-  font-family: $font;
+  font-family: $apexlight;
+  letter-spacing: 0.1rem;
   font-size: 14px;
   margin: auto;
   padding: 0 15px;
@@ -47,8 +61,10 @@ $light-slate: #b9cac9;
 }
 
 .button {
+  margin-left: 15px;
   color: $orange;
-  font-family: $font;
+  font-family: $apexlight;
+  letter-spacing: 0.2rem;
   font-size: 14px;
   padding: 5px 10px;
   border: solid 1px $orange;
@@ -56,6 +72,7 @@ $light-slate: #b9cac9;
   background: none;
   cursor: pointer;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 .link:hover {
@@ -97,4 +114,16 @@ $light-slate: #b9cac9;
 .link:hover::after {
   width: 100%;
   transition: width 0.3s;
+}
+
+.thedrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 350px;
+  background-color: #313131;
+  box-shadow: -10px 10px 30px -10px black;
+  z-index: 2;
+  overflow-y: hidden;
 }

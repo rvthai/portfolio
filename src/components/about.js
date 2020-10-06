@@ -25,11 +25,11 @@ function About() {
               {" "}
               Shortly after I graduated, I discovered a passion for front-end
               development. I enjoy designing and developing applications that
-              bring forth both delightful and functional experiences for people.{" "}
+              bring forth both delightful and functional experiences for people.
             </p>
             <p style={{ marginBottom: "1rem" }}>
-              Currently, I am working on my craft and am looking for more
-              opportunities to do so.{" "}
+              When I'm not coding, you can find me shooting hoops on the court
+              or making music in my room.
             </p>
             <p style={{ marginBottom: "2rem" }}>
               Some tools and technologies I've been working with are:
