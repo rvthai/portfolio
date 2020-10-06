@@ -33,8 +33,7 @@ $orange: #f1bb52;
 
 .entry {
   display: flex;
-  margin-bottom: 2rem;
-  // border: solid white 2px;
+  margin-bottom: 150px;
   height: 285px;
   justify-content: space-between;
 }
@@ -53,7 +52,7 @@ $orange: #f1bb52;
   height: 100%;
   width: 100%;
   background-color: $orange;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .pic {
@@ -62,17 +61,18 @@ $orange: #f1bb52;
   height: 100%;
   mix-blend-mode: multiply;
   filter: grayscale(100%);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .wrapper:hover {
   .pic {
     filter: none;
     // transform: translate(-20px, -15px);
-    transition: 0.3s;
+    transition: 0.2s;
     mix-blend-mode: normal;
   }
-  transition: 0.3s;
+  background-color: white;
+  transition: 0.2s;
 }
 
 .projecttitle {

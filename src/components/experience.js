@@ -38,7 +38,7 @@ function Experience() {
       </div>
       {/* <button className="button">View my resume</button> */}
       <span className={styles.view}>
-        View my resume{" "}
+        <div className={styles.linka}>View my resume </div>
         <FontAwesomeIcon className={styles.arrow} icon={faArrowRight} />
       </span>
     </div>

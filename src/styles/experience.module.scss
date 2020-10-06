@@ -53,7 +53,7 @@ $opensans-bold: "Open Sans Bold";
 }
 
 .company {
-  color: $graycolor;
+  color: #fff;
   font-family: $opensans-bold;
 }
 
@@ -69,6 +69,8 @@ $opensans-bold: "Open Sans Bold";
 .view {
   color: white;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   transition: 0.3s;
 }
 
@@ -77,10 +79,20 @@ $opensans-bold: "Open Sans Bold";
   transition: transform 0.3s;
 }
 
+.linka {
+  color: white;
+  transition: 0.3s;
+  margin-right: 0.5rem;
+}
+
 .view:hover {
   .arrow {
     transform: translateX(5px);
     transition: transform 0.3s;
   }
-  transition: 0.3s;
+
+  .linka {
+    transform: translateX(-5px);
+    transition: transform 0.3s;
+  }
 }
