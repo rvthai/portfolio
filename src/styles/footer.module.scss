@@ -1,0 +1,25 @@
+// Variables
+$orange: #f1bb52;
+$font: "Oxygen Mono";
+$openfont: "Open Sans";
+$kreonfont: "Kreon";
+$light-slate: #b9cac9;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 25px 50px;
+  transition: 0.3s;
+  z-index: 2;
+  color: $orange;
+}
+
+.socials {
+  display: flex;
+}
+
+.link {
+  margin-right: 2rem;
+}

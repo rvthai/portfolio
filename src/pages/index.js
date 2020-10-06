@@ -7,7 +7,7 @@ import About from "../components/about"
 import Experience from "../components/experience"
 import Projects from "../components/projects"
 import Contact from "../components/Contact"
-// import Footer from "../components/footer"
+import Footer from "../components/footer"
 import Layout from "../components/layout"
 
 function Main() {
@@ -23,6 +23,7 @@ function Main() {
         </Layout>
         <Contact />
       </div>
+      <Footer />
     </div>
   )
 }
