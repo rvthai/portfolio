@@ -3,10 +3,9 @@ import styles from "../styles/contact.module.scss"
 
 function Contact() {
   return (
-    <div id="contact" style={{ marginBottom: "20rem" }}>
+    <div id="contact" className={styles.contact}>
       <div className={styles.heading}>
         <span className={styles.title}>Contact me</span>
-        <div className={styles.hr} />
       </div>
     </div>
   )

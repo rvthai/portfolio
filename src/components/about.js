@@ -51,7 +51,6 @@ function About() {
         <div className={styles.rightside}>
           <div className={styles.wrapper}>
             <img src={Me} alt="me" className={styles.pic} />
-            <div className={styles.layer} />
           </div>
         </div>
       </div>

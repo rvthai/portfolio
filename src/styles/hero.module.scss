@@ -6,6 +6,7 @@ $opensans: "Open Sans";
 $opensans-bold: "Open Sans Bold";
 $orange: #f1bb52;
 $graycolor: #accdd7;
+$light-slate: #b9cac9;
 
 /* CSS rules */
 // .wrapper {
@@ -54,7 +55,7 @@ $graycolor: #accdd7;
 
 .description {
   // font-family: "Open Sans";
-  color: $graycolor;
+  color: $light-slate;
   margin: 20px 0 0;
   max-width: 450px;
   margin-top: 1rem;
@@ -69,7 +70,7 @@ $graycolor: #accdd7;
 }
 
 .icon {
-  color: #b9cac9;
+  color: $light-slate;
   // color: $orange;
   cursor: pointer;
   transition: all 0.3s;
