@@ -13,24 +13,20 @@ $beviet: "BeVietnam";
 $beviet-bold: "BeVietnam Bold";
 $beviet-light: "BeVietnam Light";
 
-/* CSS rules */
 .hero {
   display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
+  max-width: 1000px;
   min-height: 100vh;
   margin: 0px auto;
-  padding: 100px 0px;
-  max-width: 1000px;
 }
 
 .greeting {
-  font-family: $oxygen-mono;
-  font-size: clamp(12px, 5vw, 14px);
-  color: $orange;
+  color: var(--orange);
+  font-family: var(--oxygen-mono);
+  font-size: clamp(var(--fs-sm), 5vw, var(--fs-md));
   margin-bottom: 1rem;
 }
 

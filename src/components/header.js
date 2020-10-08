@@ -1,74 +1,60 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import styles from "../styles/header.module.scss"
+import styles from "../styles/header.module.css"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 import { CSSTransition } from "react-transition-group"
 
-import Logo from "../images/newlogo.png"
+import Logo from "../images/logo.png"
 
 function Header() {
-  const [slide, setSlide] = useState(false)
+  // const [slide, setSlide] = useState(false)
 
   useEffect(() => {
-    var prevScrollpos = window.pageYOffset
+    var prev_scroll_pos = window.pageYOffset
     window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset
-      if (currentScrollPos === 0) {
-        document.getElementById("navbar").style.boxShadow = "none"
-        document.getElementById("navbar").style.height = "100px"
-        document.getElementById("navbar").style.backgroundColor =
-          "rgb(33,33,33)"
-      } else if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0"
-        document.getElementById("navbar").style.boxShadow =
-          "0 10px 30px -10px black"
-        document.getElementById("navbar").style.height = "75px"
-        document.getElementById("navbar").style.backgroundColor =
-          "rgba(33, 33, 33, 0.95)"
+      var curr_scroll_pos = window.pageYOffset
+      var header = document.getElementById("header")
+      if (curr_scroll_pos === 0) {
+        header.style.height = "100px"
+        header.style.boxShadow = "none"
+        header.style.backgroundColor = "rgb(33,33,33)"
+      } else if (prev_scroll_pos > curr_scroll_pos) {
+        header.style.top = "0"
+        header.style.height = "75px"
+        header.style.boxShadow = "0 10px 30px -10px black"
+        header.style.backgroundColor = "rgba(33, 33, 33, 0.95)"
       } else {
-        document.getElementById("navbar").style.top = "-100px"
+        header.style.top = "-100px"
       }
-      prevScrollpos = currentScrollPos
+      prev_scroll_pos = curr_scroll_pos
     }
   }, [])
 
-  const slider = () => {
-    if (slide) {
-      var x = document.getElementsByClassName("main")[0]
-      // var y = document.getElementById("header")
-      // y.style.filter = "blur(0)"
-      x.style.filter = "blur(0)"
-      document.body.style.overflow = "auto"
-      x.style.pointerEvents = "auto"
-      // y.style.visibility = "visible"
-      setSlide(false)
-    } else {
-      var x = document.getElementsByClassName("main")[0]
-      // var y = document.getElementById("header")
-      // y.style.filter = "blur(10px)"
-      x.style.filter = "blur(10px)"
-      document.body.style.overflow = "hidden"
-      x.style.pointerEvents = "none"
-      // y.style.visibility = "hidden"
-      setSlide(true)
-    }
-  }
+  // const slider = () => {
+  //   if (slide) {
+  //     var x = document.getElementsByClassName("main")[0]
+  //     x.style.filter = "blur(0)"
+  //     document.body.style.overflow = "auto"
+  //     x.style.pointerEvents = "auto"
+  //     setSlide(false)
+  //   } else {
+  //     var x = document.getElementsByClassName("main")[0]
+  //     x.style.filter = "blur(10px)"
+  //     document.body.style.overflow = "hidden"
+  //     x.style.pointerEvents = "none"
+  //     setSlide(true)
+  //   }
+  // }
 
   return (
-    <div id="navbar" className={styles.container}>
-      <div id="header" className={styles.header}>
+    <div id="header" className={styles.container}>
+      <div className={styles.navbar}>
         <a className={styles.logo} href="/" aria-label="home">
-          <img className={styles.pic} src={Logo} alt="logo" width="35" />
+          <img src={Logo} alt="logo" width="35" />
         </a>
-        <FontAwesomeIcon
-          className={styles.hamburger}
-          icon={faBars}
-          size="2x"
-          onClick={slider}
-        />
         <div className={styles.links}>
           <Link className={styles.link} to="/#about">
             About
@@ -82,19 +68,25 @@ function Header() {
           <Link className={styles.link} to="/#contact">
             Contact
           </Link>
-
-          <a href="/resume.pdf" target="_blank" className={styles.button}>
+          <a className={styles.resume} href="/resume.pdf" target="_blank">
             Resume
           </a>
         </div>
+
+        <FontAwesomeIcon
+          className={styles.hamburger}
+          icon={faBars}
+          size="2x"
+          //onClick={slider}
+        />
       </div>
-      <CSSTransition in={slide} timeout={300} unmountOnExit classNames="drawer">
+      {/* <CSSTransition in={slide} timeout={300} unmountOnExit classNames="drawer">
         <div className={styles.thedrawer}>
           <p onClick={slider} style={{ color: "white" }}>
             x
           </p>
         </div>
-      </CSSTransition>
+      </CSSTransition> */}
     </div>
   )
 }

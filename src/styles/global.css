@@ -1,22 +1,12 @@
-// Variables
-$gunmetal: #212121;
-$orange: #f1bb52;
-$fs-sm: 12px;
-$fs-sm: 14px;
-$fs-md: 16px;
-$fs-lg: 18px;
-$fs-xl: 20px;
-
-// fonts
-// apex bold is for headers
-// apex light is for links
-// oxygen mono is for small details
-// bevietname-light for all general text
-
-// Fonts
+/* Fonts */
 @font-face {
-  font-family: "BeVietnam";
-  src: url(../fonts/BeVietnam-Regular.ttf);
+  font-family: "Apex Bold";
+  src: url(../fonts/Apex-Mk3-Bold.otf);
+}
+
+@font-face {
+  font-family: "Apex Light";
+  src: url(../fonts/Apex-Mk3-Light.otf);
 }
 
 @font-face {
@@ -30,29 +20,34 @@ $fs-xl: 20px;
 }
 
 @font-face {
-  font-family: "Apex Bold";
-  src: url(../fonts/Apex-Mk3-Medium.otf);
-}
-
-@font-face {
-  font-family: "Apex light";
-  src: url(../fonts/Apex-Mk3-ExtraLight.otf);
-}
-
-@font-face {
   font-family: "Oxygen Mono";
   src: url(../fonts/OxygenMono-Regular.ttf);
 }
 
+/* Variables */
 :root {
-  // Colors
+  --gunmetal: #212121;
   --orange: #f1bb52;
+  --white: #fff;
+  --slate: #accdd7;
+  --light-slate: #b9cac9;
 
-  // Fonts
   --apex-bold: "Apex Bold";
+  --apex-light: "Apex Light";
+  --bevietnam-bold: "BeVietnam Bold";
+  --bevietnam-light: "BeVietnam Light";
+  --oxygen-mono: "Oxygen Mono";
+
+  --fs-xs: 10px;
+  --fs-sm: 12px;
+  --fs-md: 14px;
+  --fs-lg: 16px;
+  --fs-xl: 18px;
+
+  --apex-letter-spacing: 0.1rem;
 }
 
-// Global CSS rules
+/* Rules */
 * {
   margin: 0;
   padding: 0;
@@ -64,9 +59,9 @@ html {
 }
 
 body {
-  background-color: $gunmetal;
-  font-family: "BeVietnam Light";
-  font-size: $fs-lg;
+  background-color: var(--gunmetal);
+  font-family: var(--bevietnam-light);
+  font-size: var(--fs-lg);
 }
 
 main {
@@ -79,11 +74,11 @@ main {
 }
 
 .button {
-  color: $orange;
+  color: var(--orange);
   font-family: "Oxygen Mono";
   font-size: 14px;
   padding: 20px 40px;
-  border: solid 1px $orange;
+  border: solid 1px var(--orange);
   outline: none;
   background: none;
   cursor: pointer;
@@ -92,8 +87,6 @@ main {
 }
 
 .button:hover {
-  // color: white;
-  // background: $orange;
   background: rgba(241, 188, 82, 0.2);
   transition: all 0.3s;
 }
@@ -115,22 +108,16 @@ main {
 }
 
 .drawer-enter {
-  // opacity: 0;
   transform: translateX(100%);
 }
 .drawer-enter-active {
-  // opacity: 1;
-  // transition: opacity 200ms;
   transform: translateX(0%);
   transition: transform 0.3s ease-in-out;
 }
 .drawer-exit {
-  // opacity: 1;
   transform: translateX(0%);
 }
 .drawer-exit-active {
-  // opacity: 0;
-  // transition: opacity 200ms;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 }

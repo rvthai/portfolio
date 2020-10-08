@@ -10,10 +10,7 @@ import Contact from "../components/Contact"
 import Footer from "../components/footer"
 import Layout from "../components/layout"
 
-function Main() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+function IndexPage() {
   return (
     <div>
       <Header />
@@ -31,4 +28,4 @@ function Main() {
   )
 }
 
-export default Main
+export default IndexPage

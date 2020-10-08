@@ -1,23 +1,22 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styles from "../styles/hero.module.scss"
 
+// Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import {
-  faGoogle,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
-
-import { useStaticQuery, graphql } from "gatsby"
 
 function Hero() {
   const data = useStaticQuery(
     graphql`
-      query HeroQuery {
-        allMarkdownRemark {
+      query {
+        hero: allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/hero/" } }
+        ) {
           edges {
             node {
+              id
               frontmatter {
                 greeting
                 name
@@ -31,16 +30,17 @@ function Hero() {
     `
   )
 
-  const content = data.allMarkdownRemark.edges[0].node
+  const heroData = data.hero.edges[0].node
+  // const heroheroData = data.hero.edges[0].node
 
   return (
-    <div className={styles.hero}>
-      <span className={styles.greeting}>{content.frontmatter.greeting}</span>
-      <span className={styles.name}>{content.frontmatter.name}</span>
+    <div id="hero" className={styles.hero}>
+      <p className={styles.greeting}>{heroData.frontmatter.greeting}</p>
+      <span className={styles.name}>{heroData.frontmatter.name}</span>
       <span className={styles.subheading}>
-        {content.frontmatter.subheading}
+        {heroData.frontmatter.subheading}
       </span>
-      <span className={styles.description}>{content.excerpt}</span>
+      <span className={styles.description}>{heroData.excerpt}</span>
       <div className={styles.icons}>
         <FontAwesomeIcon className={styles.icon} icon={faEnvelope} size="2x" />
         <FontAwesomeIcon className={styles.icon} icon={faLinkedin} size="2x" />

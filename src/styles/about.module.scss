@@ -34,7 +34,7 @@ $beviet-light: "BeVietnam Light";
 }
 
 .title {
-  color: white;
+  color: var(--white);
   // font-family: "Oxygen Mono";
   font-family: var(--apex-bold);
   letter-spacing: 0.1rem;
