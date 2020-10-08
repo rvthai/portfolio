@@ -1,18 +1,3 @@
-// Variables
-$kreonfont: "Kreon Bold";
-$oxygen-mono: "Oxygen Mono";
-$kreon: "Kreon";
-$opensans: "Open Sans";
-$opensans-bold: "Open Sans Bold";
-$orange: #f1bb52;
-$graycolor: #accdd7;
-$light-slate: #b9cac9;
-$apexfont: "Apex";
-$apexlight: "Apex light";
-$beviet: "BeVietnam";
-$beviet-bold: "BeVietnam Bold";
-$beviet-light: "BeVietnam Light";
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -64,13 +49,7 @@ $beviet-light: "BeVietnam Light";
   cursor: pointer;
   transition: color 0.3s;
 }
-
 .icon:hover {
   color: var(--orange);
   transition: color 0.3s;
-}
-
-.contact {
-  display: flex;
-  margin: 3rem 0;
 }

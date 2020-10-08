@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styles from "../styles/hero.module.scss"
+import styles from "../styles/hero.module.css"
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -18,11 +18,11 @@ function Hero() {
             node {
               id
               frontmatter {
-                greeting
-                name
+                tagline
+                heading1
+                heading2
                 subheading
               }
-              excerpt
             }
           }
         }
@@ -30,23 +30,36 @@ function Hero() {
     `
   )
 
-  const heroData = data.hero.edges[0].node
-  // const heroheroData = data.hero.edges[0].node
+  const heroData = data.hero.edges[0].node.frontmatter
 
   return (
     <div id="hero" className={styles.hero}>
-      <p className={styles.tagline}>{heroData.frontmatter.greeting}</p>
+      <p className={styles.tagline}>{heroData.tagline}</p>
       <div className={styles.headings}>
-        <p className={styles.heading}>{heroData.frontmatter.name}</p>
+        <p className={styles.heading}>{heroData.heading1}</p>
         <p className={`${styles.heading} ${styles.slate}`}>
-          {heroData.frontmatter.subheading}
+          {heroData.heading2}
         </p>
       </div>
-      <p className={styles.subheading}>{heroData.excerpt}</p>
+      <p className={styles.subheading}>{heroData.subheading}</p>
       <div className={styles.icons}>
-        <FontAwesomeIcon className={styles.icon} icon={faEnvelope} size="3x" />
-        <FontAwesomeIcon className={styles.icon} icon={faLinkedin} size="3x" />
-        <FontAwesomeIcon className={styles.icon} icon={faGithub} size="3x" />
+        <a href="mailto:rickyvanthai@gmail.com">
+          <FontAwesomeIcon
+            className={styles.icon}
+            icon={faEnvelope}
+            size="3x"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/rickyvthai/" target="_blank">
+          <FontAwesomeIcon
+            className={styles.icon}
+            icon={faLinkedin}
+            size="3x"
+          />
+        </a>
+        <a href="https://github.com/rvthai" target="_blank">
+          <FontAwesomeIcon className={styles.icon} icon={faGithub} size="3x" />
+        </a>
       </div>
     </div>
   )
