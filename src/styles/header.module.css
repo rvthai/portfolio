@@ -30,13 +30,13 @@
 }
 
 .link {
-  color: var(--light-slate);
+  color: var(--slate-light);
   font-family: var(--apex-light);
   font-size: var(--fs-md);
   letter-spacing: var(--apex-letter-spacing);
   text-decoration: none;
   padding: 0 15px;
-  transition: all 0.3s;
+  transition: color 0.3s;
 }
 .link:after {
   content: "";
@@ -49,10 +49,10 @@
 }
 .link:hover {
   color: var(--orange);
-  transition: all 0.3s;
+  transition: color 0.3s;
 }
 .link:hover::after {
-  width: 100%;
+  width: 98%;
   transition: width 0.3s;
 }
 
@@ -68,11 +68,11 @@
   margin-left: 15px;
   padding: 5px 10px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background 0.3s;
 }
 .resume:hover {
   background: rgba(241, 188, 82, 0.2);
-  transition: all 0.3s;
+  transition: background 0.3s;
 }
 
 .hamburger {

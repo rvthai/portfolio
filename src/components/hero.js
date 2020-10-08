@@ -34,16 +34,19 @@ function Hero() {
   // const heroheroData = data.hero.edges[0].node
 
   return (
-    // {`${styles.description} ${styles.yellow}`}
     <div id="hero" className={styles.hero}>
-      <p className={styles.heading1}>{heroData.frontmatter.greeting}</p>
-      <p className={styles.heading2}>{heroData.frontmatter.name}</p>
-      <p className={styles.heading3}>{heroData.frontmatter.subheading}</p>
-      <p className={(styles.subheading, styles.heading2)}>{heroData.excerpt}</p>
+      <p className={styles.tagline}>{heroData.frontmatter.greeting}</p>
+      <div className={styles.headings}>
+        <p className={styles.heading}>{heroData.frontmatter.name}</p>
+        <p className={`${styles.heading} ${styles.slate}`}>
+          {heroData.frontmatter.subheading}
+        </p>
+      </div>
+      <p className={styles.subheading}>{heroData.excerpt}</p>
       <div className={styles.icons}>
-        <FontAwesomeIcon className={styles.icon} icon={faEnvelope} size="2x" />
-        <FontAwesomeIcon className={styles.icon} icon={faLinkedin} size="2x" />
-        <FontAwesomeIcon className={styles.icon} icon={faGithub} size="2x" />
+        <FontAwesomeIcon className={styles.icon} icon={faEnvelope} size="3x" />
+        <FontAwesomeIcon className={styles.icon} icon={faLinkedin} size="3x" />
+        <FontAwesomeIcon className={styles.icon} icon={faGithub} size="3x" />
       </div>
     </div>
   )

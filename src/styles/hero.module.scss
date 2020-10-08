@@ -23,53 +23,51 @@ $beviet-light: "BeVietnam Light";
   margin: 0px auto;
 }
 
-.heading1 {
+.tagline {
   color: var(--orange);
   font-family: var(--oxygen-mono);
   font-size: clamp(var(--fs-sm), 5vw, var(--fs-md));
-  margin-bottom: 1rem;
 }
 
-.heading2 {
+.headings {
+  padding: 20px 0;
+}
+
+.heading {
   font-family: var(--apex-bold);
-  color: #ffffff;
+  color: var(--white);
   font-size: clamp(40px, 8vw, 80px);
   letter-spacing: 0.3rem;
 }
 
-.heading2 {
-  font-family: var(--apex-bold);
-  font-size: clamp(40px, 8vw, 80px);
-  color: $graycolor;
-  letter-spacing: 0.3rem;
+.slate {
+  color: var(--slate);
 }
 
 .subheading {
-  font-family: $beviet-light;
-  color: $light-slate;
-  margin: 20px 0 0;
-  max-width: 450px;
-  margin-top: 1rem;
+  color: var(--slate-light);
+  font-family: var(--bevietnam-light);
+  font-size: var(--fs-xl);
+  max-width: 425px;
   line-height: 1.5;
 }
 
 .icons {
-  margin: 3rem 0;
   display: flex;
-  width: 200px;
   justify-content: space-between;
+  width: 200px;
+  margin-top: 3rem;
 }
 
 .icon {
-  color: $light-slate;
-  // color: $orange;
+  color: var(--slate-light);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: color 0.3s;
 }
 
 .icon:hover {
-  color: $orange;
-  transition: all 0.3s;
+  color: var(--orange);
+  transition: color 0.3s;
 }
 
 .contact {
