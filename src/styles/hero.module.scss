@@ -23,28 +23,28 @@ $beviet-light: "BeVietnam Light";
   margin: 0px auto;
 }
 
-.greeting {
+.heading1 {
   color: var(--orange);
   font-family: var(--oxygen-mono);
   font-size: clamp(var(--fs-sm), 5vw, var(--fs-md));
   margin-bottom: 1rem;
 }
 
-.name {
-  font-family: $apexfont;
+.heading2 {
+  font-family: var(--apex-bold);
   color: #ffffff;
   font-size: clamp(40px, 8vw, 80px);
   letter-spacing: 0.3rem;
 }
 
-.subheading {
-  font-family: $apexfont;
+.heading2 {
+  font-family: var(--apex-bold);
   font-size: clamp(40px, 8vw, 80px);
   color: $graycolor;
   letter-spacing: 0.3rem;
 }
 
-.description {
+.subheading {
   font-family: $beviet-light;
   color: $light-slate;
   margin: 20px 0 0;
