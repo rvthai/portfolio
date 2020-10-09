@@ -4,7 +4,7 @@ import styles from "styles/skills.module.css"
 function Skills() {
   return (
     <div id="skills">
-      <p style={{ marginBottom: "1rem" }}>
+      <p className="paragraph">
         Some tools and technologies I've been working with are:
       </p>
       <div className={styles.lists}>

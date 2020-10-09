@@ -9,6 +9,7 @@ ul {
 }
 
 li {
+  color: var(--slate-light);
   font-family: var(--oxygen-mono);
   font-size: var(--fs-md);
   line-height: 1.5;

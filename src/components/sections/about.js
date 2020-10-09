@@ -37,17 +37,15 @@ function About() {
     <div id="about" className="section">
       <SectionHeader heading={heading} />
       <div className={styles.content}>
-        <div className={styles.leftside}>
-          <div className={styles.text}>
-            <p>{aboutData.paragraph1}</p>
-            <p>{aboutData.paragraph2}</p>
-            <p>{aboutData.paragraph3}</p>
-            <Skills />
-          </div>
+        <div className={styles.text}>
+          <p className="paragraph">{aboutData.paragraph1}</p>
+          <p className="paragraph">{aboutData.paragraph2}</p>
+          <p className="paragraph">{aboutData.paragraph3}</p>
+          <Skills />
         </div>
-        <div className={styles.rightside}>
+        <div className={styles.image}>
           <div className={styles.wrapper}>
-            <img src={Me} alt="me" className={styles.pic} />
+            <img className={styles.me} src={Me} alt="me" />
           </div>
         </div>
       </div>
