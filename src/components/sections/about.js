@@ -1,10 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styles from "../styles/about.module.scss"
+import styles from "styles/about.module.scss"
 
-import Skills from "../skills"
+import Skills from "components/skills"
+import SectionHeader from "components/section-header"
 
-import Me from "../images/me.png"
+import Me from "images/me.png"
 
 function About() {
   const data = useStaticQuery(
@@ -30,22 +31,17 @@ function About() {
 
   const aboutData = data.about.edges[0].node.frontmatter
 
+  const heading = "About me"
+
   return (
     <div id="about" className="section">
-      <div className={styles.heading}>
-        <span className={styles.title}>
-          {" "}
-          <span style={{ color: "#f1bb52" }}>#</span> About me
-        </span>
-        <div className={styles.hr} />
-      </div>
-
+      <SectionHeader heading={heading} />
       <div className={styles.content}>
         <div className={styles.leftside}>
           <div className={styles.text}>
-            <p style={{ marginBottom: "1rem" }}>{aboutData.paragraph1}</p>
-            <p style={{ marginBottom: "1rem" }}>{aboutData.paragraph2}</p>
-            <p style={{ marginBottom: "1rem" }}>{aboutData.paragraph3}</p>
+            <p>{aboutData.paragraph1}</p>
+            <p>{aboutData.paragraph2}</p>
+            <p>{aboutData.paragraph3}</p>
             <Skills />
           </div>
         </div>

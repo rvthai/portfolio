@@ -1,20 +1,23 @@
-.title {
-  color: var(--white);
-  font-family: var(--apex-bold);
-  letter-spacing: 0.1rem;
-  white-space: nowrap;
-  margin-right: 1rem;
-  font-size: 24px;
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .heading {
-  display: flex;
-  align-items: center;
-  width: 48%;
-  margin-bottom: 2rem;
+  color: var(--white);
+  font-family: var(--apex-bold);
+  font-size: 24px;
+  letter-spacing: 0.1rem;
+  white-space: nowrap;
+  margin-right: 1rem;
 }
 
 .hr {
-  border-bottom: solid 1px #b9cac9;
-  width: 100%;
+  border-bottom: solid 1px var(--slate-light);
+  width: 200px;
+}
+
+.anchor {
+  color: var(--orange);
 }

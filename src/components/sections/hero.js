@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styles from "../styles/hero.module.css"
+import styles from "styles/hero.module.css"
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"

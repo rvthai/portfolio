@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../styles/experience.module.scss"
+import styles from "../../styles/experience.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"

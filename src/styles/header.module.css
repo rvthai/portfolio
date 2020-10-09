@@ -33,7 +33,7 @@
   color: var(--slate-light);
   font-family: var(--apex-light);
   font-size: var(--fs-md);
-  letter-spacing: var(--apex-letter-spacing);
+  letter-spacing: 0.1rem;
   text-decoration: none;
   padding: 0 15px;
   transition: color 0.3s;

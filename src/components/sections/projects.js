@@ -1,10 +1,10 @@
 import React from "react"
-import styles from "src/styles/projects.module.scss"
+import styles from "../../styles/projects.module.scss"
 
 // Images
-import Project1 from "../images/projects/pypwsafe.png"
-import Project2 from "../images/projects/scrappy-cookbook.png"
-import Project3 from "../images/projects/baucua-game.png"
+import Project1 from "../../images/projects/pypwsafe.png"
+import Project2 from "../../images/projects/scrappy-cookbook.png"
+import Project3 from "../../images/projects/baucua-game.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {

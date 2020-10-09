@@ -1,26 +1,3 @@
-// Variables
-$kreonfont: "Kreon Bold";
-$oxygen-mono: "Oxygen Mono";
-$kreon: "Kreon";
-$opensans: "Open Sans";
-$orange: #f1bb52;
-$graycolor: #accdd7;
-$light-slate: #b9cac9;
-$opensans-bold: "Open Sans Bold";
-$apexfont: "Apex";
-$apexlight: "Apex light";
-$beviet: "BeVietnam";
-$beviet-bold: "BeVietnam Bold";
-$beviet-light: "BeVietnam Light";
-
-.leftside {
-  max-width: 48%;
-}
-
-.rightside {
-  max-width: 48%;
-}
-
 .content {
   display: flex;
   justify-content: space-between;
@@ -28,7 +5,6 @@ $beviet-light: "BeVietnam Light";
 
 .title {
   color: var(--white);
-  // font-family: "Oxygen Mono";
   font-family: var(--apex-bold);
   letter-spacing: 0.1rem;
   white-space: nowrap;
@@ -36,33 +12,29 @@ $beviet-light: "BeVietnam Light";
   font-size: 24px;
 }
 
-.heading {
-  display: flex;
-  align-items: center;
-  width: 48%;
-  margin-bottom: 2rem;
+.rightside {
+  max-width: 48%;
 }
 
-.hr {
-  border-bottom: solid 1px #b9cac9;
-  width: 100%;
+.leftside {
+  max-width: 48%;
 }
 
 .text {
-  color: $light-slate;
+  color: var(--slate-light);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  font-family: $beviet-light;
+  font-family: var(--bevietnam-light);
   // letter-spacing: 0.1rem;
 }
 
 .wrapper {
   position: relative;
   height: auto;
-  width: 100%;
-  background-color: $orange;
+  // max-width: 48%;
+  background-color: rgb(241, 187, 82);
   transition: 0.3s;
 }
 
