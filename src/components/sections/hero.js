@@ -50,14 +50,18 @@ function Hero() {
             size="3x"
           />
         </a>
-        <a href="https://www.linkedin.com/in/rickyvthai/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/rickyvthai/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FontAwesomeIcon
             className={styles.icon}
             icon={faLinkedin}
             size="3x"
           />
         </a>
-        <a href="https://github.com/rvthai" target="_blank">
+        <a href="https://github.com/rvthai" target="_blank" rel="noreferrer">
           <FontAwesomeIcon className={styles.icon} icon={faGithub} size="3x" />
         </a>
       </div>

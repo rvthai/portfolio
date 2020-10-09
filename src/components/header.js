@@ -48,6 +48,7 @@ function Header() {
   //     setSlide(true)
   //   }
   // }
+  const links = ["about", "work", "projects", "contact"]
 
   return (
     <div id="header" className={styles.container}>
@@ -56,18 +57,11 @@ function Header() {
           <img src={Logo} alt="logo" width="35" />
         </a>
         <div className={styles.links}>
-          <Link className={styles.link} to="/#about">
-            About
-          </Link>
-          <Link className={styles.link} to="/#experience">
-            Experience
-          </Link>
-          <Link className={styles.link} to="/#projects">
-            Projects
-          </Link>
-          <Link className={styles.link} to="/#contact">
-            Contact
-          </Link>
+          {links.map((link, index) => (
+            <Link className={styles.link} key={index} to={`/#${link}`}>
+              {link}
+            </Link>
+          ))}
           <a className={styles.resume} href="/resume.pdf" target="_blank">
             Resume
           </a>

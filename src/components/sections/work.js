@@ -4,7 +4,7 @@ import styles from "../../styles/experience.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
-function Experience() {
+function Work() {
   return (
     <div id="experience" className={styles.container}>
       <div className={styles.heading}>
@@ -45,4 +45,4 @@ function Experience() {
   )
 }
 
-export default Experience
+export default Work

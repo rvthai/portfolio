@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styles from "styles/about.module.scss"
+import styles from "styles/about.module.css"
 
 import Skills from "components/skills"
 import SectionHeader from "components/section-header"
