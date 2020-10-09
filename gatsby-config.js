@@ -19,13 +19,16 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+
+    `gatsby-plugin-resolve-src`,
+
     // {
     //   resolve: `gatsby-plugin-layout`,
     //   options: {
     //     component: require.resolve(`./src/layouts/index.js`),
     //   },
     // },
-    "gatsby-plugin-sass",
+    `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-fontawesome-css`,
   ],
