@@ -64,13 +64,17 @@ body {
   font-size: var(--fs-lg);
 }
 
-main {
+.main {
   margin: 0 auto;
   width: 100%;
   max-width: 1600px;
   min-height: 100vh;
   padding: 0px 150px;
   transition: 0.3s;
+}
+
+.section {
+  padding: 150px 0;
 }
 
 .button {

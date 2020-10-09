@@ -13,13 +13,6 @@ $beviet: "BeVietnam";
 $beviet-bold: "BeVietnam Bold";
 $beviet-light: "BeVietnam Light";
 
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 150px 0;
-}
-
 .leftside {
   max-width: 48%;
 }
@@ -57,13 +50,17 @@ $beviet-light: "BeVietnam Light";
 
 .text {
   color: $light-slate;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   font-family: $beviet-light;
   // letter-spacing: 0.1rem;
 }
 
 .wrapper {
   position: relative;
-  height: 100%;
+  height: auto;
   width: 100%;
   background-color: $orange;
   transition: 0.3s;
@@ -72,7 +69,7 @@ $beviet-light: "BeVietnam Light";
 .pic {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   mix-blend-mode: multiply;
   filter: grayscale(100%);
   transition: 0.3s;
@@ -102,6 +99,7 @@ ul {
 li {
   font-family: $oxygen-mono;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 li::before {
