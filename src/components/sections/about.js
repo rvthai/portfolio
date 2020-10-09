@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from "../styles/about.module.scss"
 
+import Skills from "../skills"
+
 import Me from "../images/me.png"
 
 function About() {
@@ -37,29 +39,14 @@ function About() {
         </span>
         <div className={styles.hr} />
       </div>
+
       <div className={styles.content}>
         <div className={styles.leftside}>
           <div className={styles.text}>
             <p style={{ marginBottom: "1rem" }}>{aboutData.paragraph1}</p>
             <p style={{ marginBottom: "1rem" }}>{aboutData.paragraph2}</p>
             <p style={{ marginBottom: "1rem" }}>{aboutData.paragraph3}</p>
-            <div>
-              <p style={{ marginBottom: "1rem" }}>
-                Some tools and technologies I've been working with are:
-              </p>
-              <div className={styles.lists}>
-                <ul>
-                  <li>JavaScript (ES6+)</li>
-                  <li>React</li>
-                  <li>Node.js</li>
-                </ul>
-                <ul>
-                  <li>HTML & CSS</li>
-                  <li>Python</li>
-                  <li>GraphQL</li>
-                </ul>
-              </div>
-            </div>
+            <Skills />
           </div>
         </div>
         <div className={styles.rightside}>

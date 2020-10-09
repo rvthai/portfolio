@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../styles/projects.module.scss"
+import styles from "src/styles/projects.module.scss"
 
 // Images
 import Project1 from "../images/projects/pypwsafe.png"

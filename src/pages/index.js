@@ -2,11 +2,11 @@ import React, { useEffect } from "react"
 
 // Components
 import Header from "../components/header"
-import Hero from "../components/hero"
-import About from "../components/about"
-import Experience from "../components/experience"
-import Projects from "../components/projects"
-import Contact from "../components/Contact"
+import Hero from "../components/sections/hero"
+import About from "../components/sections/about"
+import Experience from "../components/sections/experience"
+import Projects from "../components/sections/projects"
+import Contact from "../components/sections/contact"
 import Footer from "../components/footer"
 import Layout from "../components/layout"
 

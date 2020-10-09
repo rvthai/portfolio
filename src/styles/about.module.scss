@@ -85,29 +85,29 @@ $beviet-light: "BeVietnam Light";
   transition: 0.3s;
 }
 
-.lists {
-  display: flex;
-  // justify-content: space-between;
-}
+// .lists {
+//   display: flex;
+//   // justify-content: space-between;
+// }
 
-ul {
-  list-style-position: inside;
-  list-style: none;
-  margin-right: 2rem;
-}
+// ul {
+//   list-style-position: inside;
+//   list-style: none;
+//   margin-right: 2rem;
+// }
 
-li {
-  font-family: $oxygen-mono;
-  font-size: 14px;
-  line-height: 1.5;
-}
+// li {
+//   font-family: $oxygen-mono;
+//   font-size: 14px;
+//   line-height: 1.5;
+// }
 
-li::before {
-  content: "■";
-  color: $orange;
-  display: inline-block;
-  width: 1rem;
-}
+// li::before {
+//   content: "■";
+//   color: $orange;
+//   display: inline-block;
+//   width: 1rem;
+// }
 
 // li::marker {
 //   color: red;

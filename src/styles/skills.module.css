@@ -1,0 +1,22 @@
+.lists {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  list-style-position: inside;
+  margin-right: 2rem;
+}
+
+li {
+  font-family: var(--oxygen-mono);
+  font-size: var(--fs-md);
+  line-height: 1.5;
+}
+
+li::before {
+  content: "■";
+  color: var(--orange);
+  display: inline-block;
+  width: 1rem;
+}

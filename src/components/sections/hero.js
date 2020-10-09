@@ -33,7 +33,7 @@ function Hero() {
   const heroData = data.hero.edges[0].node.frontmatter
 
   return (
-    <div id="hero" className={styles.hero}>
+    <div id="hero" className={styles.container}>
       <p className={styles.tagline}>{heroData.tagline}</p>
       <div className={styles.headings}>
         <p className={styles.heading}>{heroData.heading1}</p>
