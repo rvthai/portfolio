@@ -8,7 +8,6 @@ import Work from "../components/sections/work"
 import Projects from "../components/sections/projects"
 import Contact from "../components/sections/contact"
 import Footer from "../components/footer"
-import Layout from "../components/layout"
 
 function IndexPage() {
   return (
@@ -16,11 +15,9 @@ function IndexPage() {
       <Header />
       <div className="main">
         <Hero />
-        <Layout>
-          <About />
-          <Work />
-          <Projects />
-        </Layout>
+        <About />
+        <Work />
+        <Projects />
         <Contact />
       </div>
       <Footer />

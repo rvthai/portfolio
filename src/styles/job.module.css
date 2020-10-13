@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.flexbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company {
+  color: var(--white);
+  font-family: var(--bevietnam-bold);
+  font-size: var(--fs-xl);
+  line-height: 2;
+}
+
+.stint {
+  font-family: var(--oxygen-mono);
+  font-size: var(--fs-md);
+}

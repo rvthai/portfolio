@@ -1,0 +1,30 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--apex-light);
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.label {
+  color: var(--white);
+  margin-right: 0.5rem;
+  transition: 0.3s;
+}
+
+.arrow {
+  color: var(--orange);
+  transition: transform 0.3s;
+}
+
+.link:hover .label {
+  letter-spacing: 0.2rem;
+  color: var(--orange);
+  transition: all 0.3s;
+}
+.link:hover .arrow {
+  transform: translateX(5px);
+  transition: transform 0.3s;
+}

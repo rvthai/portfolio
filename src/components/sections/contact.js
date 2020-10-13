@@ -3,7 +3,7 @@ import styles from "../../styles/contact.module.scss"
 
 function Contact() {
   return (
-    <div id="contact" className={styles.contact}>
+    <div id="contact" className="section">
       <div className={styles.heading}>
         <span className={styles.title}>Contact me</span>
       </div>

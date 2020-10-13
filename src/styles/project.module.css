@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.pic {
+  margin-left: 1rem;
+}
+
+.tagline {
+  color: var(--orange);
+  font-family: var(--oxygen-mono);
+  font-size: var(--fs-xs);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 375px;
+  text-align: right;
+}
+
+.description {
+  margin: 15px 0 25px 0;
+}
+
+.title {
+  color: var(--white);
+  font-family: var(--bevietnam-bold);
+  font-size: var(--fs-xl);
+  line-height: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.tags {
+  display: flex;
+  margin-bottom: 25px;
+  align-self: flex-end;
+}
+
+.tag {
+  border: solid 1px var(--orange);
+  border-radius: 2px;
+  padding: 5px 10px;
+  color: var(--orange);
+  font-family: "Oxygen Mono";
+  font-size: 10px;
+  margin-left: 1rem;
+}
+
+.icons {
+  display: inline-flex;
+  align-self: flex-end;
+}
+
+.icon {
+  color: var(--slate-light);
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 1rem;
+  font-size: 18px;
+}
+
+.icon:hover {
+  color: var(--orange);
+  transition: all 0.3s;
+}
+
+.inversetext {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: 375px;
+  text-align: left;
+}
+
+.inversetags {
+  display: flex;
+  margin-bottom: 25px;
+  align-self: flex-start;
+}
+
+.inversetag {
+  border: solid 1px var(--orange);
+  border-radius: 2px;
+  padding: 5px 10px;
+  color: var(--orange);
+  font-family: "Oxygen Mono";
+  font-size: 10px;
+  margin-right: 1rem;
+}
+
+.inverseicons {
+  display: flex;
+}
+
+.inverseicon {
+  color: var(--slate-light);
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-right: 1rem;
+  font-size: 18px;
+}
+
+.inverseicon:hover {
+  color: var(--orange);
+  transition: all 0.3s;
+}

@@ -57,6 +57,7 @@ html {
 }
 
 body {
+  color: var(--slate-light);
   background-color: var(--gunmetal);
   font-family: var(--bevietnam-light);
   font-size: var(--fs-lg);
@@ -72,6 +73,8 @@ body {
 }
 
 .section {
+  max-width: 900px;
+  margin: 0px auto;
   padding: 150px 0;
 }
 
