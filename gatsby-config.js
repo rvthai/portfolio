@@ -21,15 +21,17 @@ module.exports = {
     },
 
     `gatsby-plugin-resolve-src`,
-
-    // {
-    //   resolve: `gatsby-plugin-layout`,
-    //   options: {
-    //     component: require.resolve(`./src/layouts/index.js`),
-    //   },
-    // },
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }

@@ -1,11 +1,29 @@
 .container {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
   margin-bottom: 100px;
 }
 
 .pic {
-  margin-left: 1rem;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pic {
+    order: -1;
+    width: 300px;
+    align-self: center;
+  }
 }
 
 .tagline {
@@ -64,8 +82,8 @@
   color: var(--slate-light);
   cursor: pointer;
   transition: all 0.3s;
-  margin-left: 1rem;
-  font-size: 18px;
+  margin-left: 1.5rem;
+  font-size: 20px;
 }
 
 .icon:hover {
@@ -105,8 +123,8 @@
   color: var(--slate-light);
   cursor: pointer;
   transition: all 0.3s;
-  margin-right: 1rem;
-  font-size: 18px;
+  margin-right: 1.5rem;
+  font-size: 20px;
 }
 
 .inverseicon:hover {

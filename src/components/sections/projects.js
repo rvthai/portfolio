@@ -26,7 +26,7 @@ function Projects() {
                   description
                   tags
                   link
-                  image
+                  github
                 }
               }
             }
@@ -49,6 +49,7 @@ function Projects() {
             description={project.description}
             tags={project.tags}
             link={project.link}
+            github={project.github}
             image={project.image}
           />
         ))}

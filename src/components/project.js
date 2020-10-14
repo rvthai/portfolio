@@ -1,5 +1,7 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styles from "styles/project.module.css"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
@@ -9,18 +11,20 @@ function Project(props) {
   const imgRef = React.createRef()
   const textRef = React.createRef()
   const tagsRef = React.createRef()
-  const iconsRef = React.createRef()
 
-  if ((props.index + 1) % 2 != 0) {
+  const data = useStaticQuery(graphql``)
+
+  if ((props.index + 1) % 2 !== 0) {
     return (
       <div id="project" className={styles.container}>
-        <img
+        {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
+        {/* <img
           ref={imgRef}
           className={styles.pic}
-          src={require("../images/projects/" + props.image + ".png")}
+          src={props.image}
           alt={props.image}
           width="400"
-        />
+        /> */}
         <div ref={textRef} className={styles.text}>
           <p className={styles.tagline}>Featured Project</p>
           <p className={styles.title}>{props.title}</p>
@@ -35,8 +39,15 @@ function Project(props) {
             ))}
           </div>
           <div className={styles.icons}>
-            <FontAwesomeIcon className={styles.icon} icon={faGithub} />
-            <FontAwesomeIcon className={styles.icon} icon={faExternalLinkAlt} />
+            <a href={props.github} target="_blank" rel="noreferrer">
+              <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+            </a>
+            <a href={props.link} target="_blank" rel="noreferrer">
+              <FontAwesomeIcon
+                className={styles.icon}
+                icon={faExternalLinkAlt}
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -58,20 +69,24 @@ function Project(props) {
             ))}
           </div>
           <div className={styles.inverseicons}>
-            <FontAwesomeIcon className={styles.inverseicon} icon={faGithub} />
-            <FontAwesomeIcon
-              className={styles.inverseicon}
-              icon={faExternalLinkAlt}
-            />
+            <a href={props.github} target="_blank" rel="noreferrer">
+              <FontAwesomeIcon className={styles.inverseicon} icon={faGithub} />
+            </a>
+            <a href={props.link} target="_blank" rel="noreferrer">
+              <FontAwesomeIcon
+                className={styles.inverseicon}
+                icon={faExternalLinkAlt}
+              />
+            </a>
           </div>
         </div>
-        <img
+        {/* <img
           ref={imgRef}
           className={styles.pic}
-          src={require("../images/projects/" + props.image + ".png")}
+          src={props.image}
           alt={props.image}
           width="400"
-        />
+        /> */}
       </div>
     )
   }
