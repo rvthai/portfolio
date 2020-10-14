@@ -150,7 +150,13 @@
   }
 
   .tag,
-  .icon {
+  .inversetag {
     margin: 0.5rem 0.5rem 0.5rem 0;
+  }
+
+  .icon,
+  .inverseicon {
+    margin-right: 1.5rem;
+    margin-left: 0;
   }
 }

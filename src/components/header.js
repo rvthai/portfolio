@@ -20,7 +20,7 @@ function Header() {
       if (curr_scroll_pos === 0) {
         header.style.height = "100px"
         header.style.boxShadow = "none"
-        header.style.backgroundColor = "rgb(33,33,33)"
+        header.style.backgroundColor = "transparent"
       } else if (prev_scroll_pos > curr_scroll_pos) {
         header.style.top = "0"
         header.style.height = "75px"

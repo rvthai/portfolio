@@ -21,3 +21,10 @@
   font-family: var(--oxygen-mono);
   font-size: var(--fs-sm);
 }
+
+@media screen and (max-width: 768px) {
+  .flexbetween {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
