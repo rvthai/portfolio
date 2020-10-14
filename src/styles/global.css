@@ -83,24 +83,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.button {
-  color: var(--orange);
-  font-family: "Oxygen Mono";
-  font-size: 14px;
-  padding: 20px 40px;
-  border: solid 1px var(--orange);
-  outline: none;
-  background: none;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none;
-}
-
-.button:hover {
-  background: rgba(241, 188, 82, 0.2);
-  transition: all 0.3s;
-}
-
 @media screen and (max-width: 1080px) {
   .main {
     padding: 0px 100px;
