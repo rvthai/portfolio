@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 40px;
 }
 
 .flexbetween {
@@ -19,5 +19,5 @@
 
 .stint {
   font-family: var(--oxygen-mono);
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
 }

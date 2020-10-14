@@ -7,6 +7,7 @@ projects:
       tags: [React, Node.js, Socket.io, Express],
       link: https://baucuacacop.herokuapp.com/,
       github: https://github.com/rvthai/baucua,
+      image: ../images/baucuacacop.png,
     },
     {
       title: Scrappy Cookbook,
@@ -14,6 +15,7 @@ projects:
       tags: [React, Redux, Edamam API],
       link: https://scrappycookbook.netlify.app/,
       github: https://github.com/rvthai/scrappy-cookbook,
+      image: ../images/scrappy-cookbook.png,
     },
     {
       title: Python Password Safe,
@@ -21,6 +23,7 @@ projects:
       tags: [Python, SQLite, PyPI],
       link: https://pypi.org/project/py-pwsafe/,
       github: https://github.com/rvthai/python-passwordsafe,
+      image: ../images/pypwsafe.png,
     },
   ]
 ---

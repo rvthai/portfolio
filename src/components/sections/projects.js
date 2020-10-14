@@ -27,6 +27,14 @@ function Projects() {
                   tags
                   link
                   github
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 400) {
+                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluidLimitPresentationSize
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -50,7 +58,7 @@ function Projects() {
             tags={project.tags}
             link={project.link}
             github={project.github}
-            image={project.image}
+            image={project.image.childImageSharp.fluid}
           />
         ))}
       </div>

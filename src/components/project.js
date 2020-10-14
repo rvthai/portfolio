@@ -12,19 +12,19 @@ function Project(props) {
   const textRef = React.createRef()
   const tagsRef = React.createRef()
 
-  const data = useStaticQuery(graphql``)
-
   if ((props.index + 1) % 2 !== 0) {
     return (
-      <div id="project" className={styles.container}>
-        {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-        {/* <img
-          ref={imgRef}
+      <div
+        id="project"
+        className={
+          props.index + 1 === 3 ? styles.lastcontainer : styles.container
+        }
+      >
+        <Img
           className={styles.pic}
-          src={props.image}
-          alt={props.image}
-          width="400"
-        /> */}
+          imgStyle={{ objectFit: "contain" }}
+          fluid={props.image}
+        />
         <div ref={textRef} className={styles.text}>
           <p className={styles.tagline}>Featured Project</p>
           <p className={styles.title}>{props.title}</p>
@@ -80,13 +80,11 @@ function Project(props) {
             </a>
           </div>
         </div>
-        {/* <img
-          ref={imgRef}
-          className={styles.pic}
-          src={props.image}
-          alt={props.image}
-          width="400"
-        /> */}
+        <Img
+          className={styles.inversepic}
+          imgStyle={{ objectFit: "contain" }}
+          fluid={props.image}
+        />
       </div>
     )
   }
