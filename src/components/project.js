@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import styles from "styles/project.module.css"
-import { graphql, useStaticQuery } from "gatsby"
+import sr from "utils/scroll-reveal"
 import Img from "gatsby-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -8,34 +8,33 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 function Project(props) {
-  const imgRef = React.createRef()
-  const textRef = React.createRef()
-  const tagsRef = React.createRef()
+  const revealContainer = useRef(null)
+
+  useEffect(() => {
+    sr.reveal(revealContainer.current, { ...sr.config, delay: 300 })
+  }, [])
 
   if ((props.index + 1) % 2 !== 0) {
     return (
       <div
-        // data-sal="slide-up"
-        // data-sal-delay="300"
-        // data-sal-easing="ease"
-        // data-sal-duration="500"
         id="project"
         className={
           props.index + 1 === 3 ? styles.lastcontainer : styles.container
         }
+        ref={revealContainer}
       >
         <Img
           className={styles.pic}
           imgStyle={{ objectFit: "contain" }}
           fluid={props.image}
         />
-        <div ref={textRef} className={styles.text}>
+        <div className={styles.text}>
           <p className={styles.tagline}>Featured Project</p>
           <p className={styles.title}>{props.title}</p>
           <p className={`${styles.description} paragraph`}>
             {props.description}
           </p>
-          <div ref={tagsRef} className={styles.tags}>
+          <div className={styles.tags}>
             {props.tags.map((tag, index) => (
               <div key={index} className={styles.tag}>
                 {tag}
@@ -58,14 +57,14 @@ function Project(props) {
     )
   } else {
     return (
-      <div id="project" className={styles.container}>
-        <div ref={textRef} className={styles.inversetext}>
+      <div id="project" className={styles.container} ref={revealContainer}>
+        <div className={styles.inversetext}>
           <p className={styles.tagline}>Featured Project</p>
           <p className={styles.title}>{props.title}</p>
           <p className={`${styles.description} paragraph`}>
             {props.description}
           </p>
-          <div ref={tagsRef} className={styles.inversetags}>
+          <div className={styles.inversetags}>
             {props.tags.map((tag, index) => (
               <div key={index} className={styles.inversetag}>
                 {tag}

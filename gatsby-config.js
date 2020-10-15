@@ -25,6 +25,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from "styles/about.module.css"
-import sr from "../../../gatsby-browser"
+import sr from "utils/scroll-reveal"
 
 import Skills from "components/skills"
 import SectionHeader from "components/section-header"
@@ -33,32 +33,16 @@ function About() {
   const aboutData = data.about.edges[0].node.frontmatter
 
   const heading = "About me"
-  const revealContainer = useRef(null)
+  const revealContent = useRef(null)
 
   useEffect(() => {
-    const config = {
-      origin: "right",
-      duration: 1000,
-      delay: 150,
-      distance: "500px",
-      scale: 1,
-      easing: "ease",
-    }
-
-    sr.reveal(revealContainer.current, config)
+    sr.reveal(revealContent.current, { ...sr.config, delay: 300 })
   }, [])
 
   return (
-    <div
-      id="about"
-      className="section"
-      ref={revealContainer}
-      // data-sal="slide-up"
-      // data-sal-delay="300"
-      // data-sal-easing="ease"
-    >
+    <div id="about" className="section">
       <SectionHeader heading={heading} />
-      <div className={styles.content}>
+      <div className={styles.content} ref={revealContent}>
         <div className={styles.text}>
           <p className="paragraph">{aboutData.paragraph1}</p>
           <p className="paragraph">{aboutData.paragraph2}</p>

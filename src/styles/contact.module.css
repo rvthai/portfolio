@@ -36,7 +36,7 @@
   cursor: pointer;
   transition: all 0.3s;
   text-decoration: none;
-  margin: 3rem;
+  margin: 1rem;
 }
 .button:hover {
   background: rgba(241, 188, 82, 0.2);

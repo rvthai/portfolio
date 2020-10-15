@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styles from "styles/header.module.css"
+import { CSSTransition } from "react-transition-group"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-
-import { CSSTransition } from "react-transition-group"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 import Logo from "images/logo.png"
 
 function Header() {
-  // const [slide, setSlide] = useState(false)
+  const [slide, setSlide] = useState(false)
+  const [showOverlay, setShowOverlay] = useState(false)
 
   useEffect(() => {
     var prev_scroll_pos = window.pageYOffset
@@ -33,26 +33,23 @@ function Header() {
     }
   }, [])
 
-  // const slider = () => {
-  //   if (slide) {
-  //     var x = document.getElementsByClassName("main")[0]
-  //     x.style.filter = "blur(0)"
-  //     document.body.style.overflow = "auto"
-  //     x.style.pointerEvents = "auto"
-  //     setSlide(false)
-  //   } else {
-  //     var x = document.getElementsByClassName("main")[0]
-  //     x.style.filter = "blur(10px)"
-  //     document.body.style.overflow = "hidden"
-  //     x.style.pointerEvents = "none"
-  //     setSlide(true)
-  //   }
-  // }
+  const slider = () => {
+    if (slide) {
+      setShowOverlay(false)
+      document.body.style.overflow = "auto"
+      setSlide(false)
+    } else {
+      setShowOverlay(true)
+      document.body.style.overflow = "hidden"
+      setSlide(true)
+    }
+  }
   const links = ["about", "work", "projects", "contact"]
 
   return (
     <div id="header" className={styles.container}>
-      <div className={styles.navbar}>
+      {showOverlay ? <div onClick={slider} className={styles.overlay} /> : null}
+      <div id="navbar" className={styles.navbar}>
         <Link
           className={styles.logo}
           to="/"
@@ -76,16 +73,29 @@ function Header() {
           className={styles.hamburger}
           icon={faBars}
           size="2x"
-          //onClick={slider}
+          onClick={slider}
         />
       </div>
-      {/* <CSSTransition in={slide} timeout={300} unmountOnExit classNames="drawer">
-        <div className={styles.thedrawer}>
-          <p onClick={slider} style={{ color: "white" }}>
-            x
-          </p>
+      <CSSTransition in={slide} timeout={300} unmountOnExit classNames="drawer">
+        <div className={styles.drawera}>
+          <FontAwesomeIcon
+            className={styles.cross}
+            icon={faTimes}
+            size="2x"
+            onClick={slider}
+          />
+          <div className={styles.vlinks}>
+            {links.map((link, index) => (
+              <Link className={styles.vlink} key={index} to={`/#${link}`}>
+                {link}
+              </Link>
+            ))}
+            <a className={styles.vresume} href="/resume.pdf" target="_blank">
+              Resume
+            </a>
+          </div>
         </div>
-      </CSSTransition> */}
+      </CSSTransition>
     </div>
   )
 }
