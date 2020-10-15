@@ -33,7 +33,13 @@ function Hero() {
   const heroData = data.hero.edges[0].node.frontmatter
 
   return (
-    <div id="hero" className={styles.container}>
+    <div
+      id="hero"
+      className={styles.container}
+      // data-sal="slide-up"
+      // data-sal-delay="300"
+      // data-sal-easing="ease"
+    >
       <p className={styles.tagline}>{heroData.tagline}</p>
       <div className={styles.headings}>
         <p className={styles.heading}>{heroData.heading1}</p>

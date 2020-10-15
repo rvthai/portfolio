@@ -37,6 +37,7 @@
   text-decoration: none;
   padding: 0 15px;
   transition: color 0.3s;
+  cursor: pointer;
 }
 .link:after {
   content: "";

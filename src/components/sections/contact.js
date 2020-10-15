@@ -26,7 +26,13 @@ function Contact() {
   const contactData = data.contact.edges[0].node.frontmatter
 
   return (
-    <div id="contact" className="section">
+    <div
+      id="contact"
+      className="section"
+      // data-sal="slide-up"
+      // data-sal-delay="300"
+      // data-sal-easing="ease"
+    >
       <div className={styles.container}>
         <div className={styles.content}>
           <p className={styles.header}>Contact Me</p>

@@ -36,7 +36,13 @@ function Work() {
   const workData = data.work.edges[0].node.frontmatter.jobs
 
   return (
-    <div id="work" className="section">
+    <div
+      id="work"
+      className="section"
+      // data-sal="slide-up"
+      // data-sal-delay="300"
+      // data-sal-easing="ease"
+    >
       <SectionHeader heading={heading} />
       <div className={styles.content}>
         {workData.map((job, index) => (

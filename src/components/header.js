@@ -53,9 +53,14 @@ function Header() {
   return (
     <div id="header" className={styles.container}>
       <div className={styles.navbar}>
-        <a className={styles.logo} href="/" aria-label="home">
+        <Link
+          className={styles.logo}
+          to="/"
+          onClick="window.location.reload()"
+          aria-label="home"
+        >
           <img src={Logo} alt="logo" width="35" />
-        </a>
+        </Link>
         <div className={styles.links}>
           {links.map((link, index) => (
             <Link className={styles.link} key={index} to={`/#${link}`}>

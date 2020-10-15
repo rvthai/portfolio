@@ -19,7 +19,8 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-
+    `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,

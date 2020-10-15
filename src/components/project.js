@@ -15,6 +15,10 @@ function Project(props) {
   if ((props.index + 1) % 2 !== 0) {
     return (
       <div
+        // data-sal="slide-up"
+        // data-sal-delay="300"
+        // data-sal-easing="ease"
+        // data-sal-duration="500"
         id="project"
         className={
           props.index + 1 === 3 ? styles.lastcontainer : styles.container
