@@ -31,30 +31,31 @@ function Contact() {
   const revealSubheading = useRef(null)
   const revealButton = useRef(null)
 
-  useEffect(() => {
-    sr.reveal(revealHeader.current, { ...sr.config, delay: 150 })
-    sr.reveal(revealHeading.current, { ...sr.config, delay: 300 })
-    sr.reveal(revealSubheading.current, { ...sr.config, delay: 450 })
-    sr.reveal(revealButton.current, { ...sr.config, delay: 600 })
-  }, [])
+  // useEffect(() => {
+  //   sr.reveal(revealHeader.current, { ...sr.config, delay: 150 })
+  //   sr.reveal(revealHeading.current, { ...sr.config, delay: 300 })
+  //   sr.reveal(revealSubheading.current, { ...sr.config, delay: 450 })
+  //   sr.reveal(revealButton.current, { ...sr.config, delay: 600 })
+  // }, [])
 
   return (
     <div id="contact" className="section">
       <div className={styles.container}>
         <div className={styles.content}>
-          <p className={styles.header} ref={revealHeader}>
+          <p className={styles.header} {...sr} ref={revealHeader}>
             Contact Me
           </p>
-          <p className={styles.heading} ref={revealHeading}>
+          <p className={styles.heading} {...sr} ref={revealHeading}>
             {contactData.heading}
           </p>
-          <p className="paragraph" ref={revealSubheading}>
+          <p className="paragraph" {...sr} ref={revealSubheading}>
             {contactData.subheading}
           </p>
         </div>
         <a
           className={styles.button}
           href="mailto:rickyvanthai@gmail.com"
+          {...sr}
           ref={revealButton}
         >
           {contactData.button}

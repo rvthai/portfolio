@@ -20,6 +20,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -39,11 +40,11 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-smoothscroll`,
+
     `gatsby-plugin-resolve-src`,
-    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-fontawesome-css`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0px auto;
+}
+
+.heading {
+  font-family: var(--apex-bold);
+  letter-spacing: 1rem;
+  color: var(--orange);
+  font-size: 90px;
+}
+
+.subheading {
+  font-family: var(--apex-light);
+  letter-spacing: 0.1rem;
+  color: var(--slate);
+  font-size: 24px;
+}
+
+.button {
+  color: var(--orange);
+  font-family: var(--apex-light);
+  letter-spacing: 0.2rem;
+  font-size: 14px;
+  padding: 20px 40px;
+  border-radius: 2px;
+  border: solid 1px var(--orange);
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  margin: 2rem;
+}
+.button:hover {
+  background: rgba(241, 188, 82, 0.2);
+  transition: background 0.3s;
+}

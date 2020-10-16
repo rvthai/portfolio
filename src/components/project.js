@@ -9,9 +9,9 @@ import ExternalLink from "images/icons/external-link.svg"
 function Project(props) {
   const revealContainer = useRef(null)
 
-  useEffect(() => {
-    sr.reveal(revealContainer.current, { ...sr.config, delay: 300 })
-  }, [])
+  // useEffect(() => {
+  //   sr.reveal(revealContainer.current, { ...sr.config, delay: 300 })
+  // }, [])
 
   if ((props.index + 1) % 2 !== 0) {
     return (
@@ -20,6 +20,7 @@ function Project(props) {
         className={
           props.index + 1 === 3 ? styles.lastcontainer : styles.container
         }
+        {...sr}
         ref={revealContainer}
       >
         <Img
@@ -53,7 +54,12 @@ function Project(props) {
     )
   } else {
     return (
-      <div id="project" className={styles.container} ref={revealContainer}>
+      <div
+        id="project"
+        className={styles.container}
+        {...sr}
+        ref={revealContainer}
+      >
         <div className={styles.inversetext}>
           <p className={styles.tagline}>Featured Project</p>
           <p className={styles.title}>{props.title}</p>

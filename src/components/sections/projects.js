@@ -46,13 +46,7 @@ function Projects() {
   const projectsData = data.projects.edges[0].node.frontmatter.projects
 
   return (
-    <div
-      id="projects"
-      className="section"
-      // data-sal="slide-up"
-      // data-sal-delay="300"
-      // data-sal-easing="ease"
-    >
+    <div id="projects" className="section">
       <SectionHeader heading={heading} />
       <div className={styles.content}>
         {projectsData.map((project, index) => (

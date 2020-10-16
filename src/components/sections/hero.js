@@ -35,28 +35,33 @@ function Hero() {
   const revealHeadings = useRef(null)
   const revealSubheading = useRef(null)
   const revealIcons = useRef(null)
-  useEffect(() => {
-    sr.reveal(revealTagline.current, { ...sr.config, delay: 150 })
-    sr.reveal(revealHeadings.current, { ...sr.config, delay: 300 })
-    sr.reveal(revealSubheading.current, { ...sr.config, delay: 450 })
-    sr.reveal(revealIcons.current, { ...sr.config, delay: 600 })
-  }, [])
-
+  // useEffect(() => {
+  //   sr.reveal(revealTagline.current, { ...sr.config, delay: 150 })
+  //   sr.reveal(revealHeadings.current, { ...sr.config, delay: 300 })
+  //   sr.reveal(revealSubheading.current, { ...sr.config, delay: 450 })
+  //   sr.reveal(revealIcons.current, { ...sr.config, delay: 600 })
+  // }, [])
+  const dataAttr = {
+    "data-sal": "slide-down",
+    "data-sal-delay": "200",
+    "data-sal-duration": "1000",
+    "data-sal-easing": "ease",
+  }
   return (
     <div id="hero" className={styles.container}>
-      <p className={styles.tagline} ref={revealTagline}>
+      <p className={styles.tagline} {...sr} ref={revealTagline}>
         {heroData.tagline}
       </p>
-      <div className={styles.headings} ref={revealHeadings}>
+      <div className={styles.headings} {...sr} ref={revealHeadings}>
         <p className={styles.heading}>{heroData.heading1}</p>
         <p className={`${styles.heading} ${styles.slate}`}>
           {heroData.heading2}
         </p>
       </div>
-      <p className={styles.subheading} ref={revealSubheading}>
+      <p className={styles.subheading} {...sr} ref={revealSubheading}>
         {heroData.subheading}
       </p>
-      <div className={styles.icons} ref={revealIcons}>
+      <div className={styles.icons} {...sr} ref={revealIcons}>
         <a href="mailto:rickyvanthai@gmail.com">
           <Envelope className={styles.icon} />
         </a>

@@ -34,15 +34,14 @@ function About() {
 
   const heading = "About me"
   const revealContent = useRef(null)
-
-  useEffect(() => {
-    sr.reveal(revealContent.current, { ...sr.config, delay: 300 })
-  }, [])
+  // useEffect(() => {
+  //   sr.reveal(revealContent.current, { ...sr.config, delay: 300 })
+  // }, [])
 
   return (
     <div id="about" className="section">
       <SectionHeader heading={heading} />
-      <div className={styles.content} ref={revealContent}>
+      <div className={styles.content} {...sr} ref={revealContent}>
         <div className={styles.text}>
           <p className="paragraph">{aboutData.paragraph1}</p>
           <p className="paragraph">{aboutData.paragraph2}</p>
