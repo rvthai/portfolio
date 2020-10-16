@@ -68,7 +68,6 @@ function Header() {
             Resume
           </a>
         </div>
-
         <FontAwesomeIcon
           className={styles.hamburger}
           icon={faBars}

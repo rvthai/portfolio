@@ -1,8 +1,5 @@
 import "./src/styles/global.css"
 
-import ScrollReveal from "scrollreveal"
-export default ScrollReveal()
-
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require
   require("smooth-scroll")('a[href*="#"]')

@@ -1,11 +1,6 @@
 import React from "react"
 import styles from "styles/footer.module.css"
 
-// Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-
 function Footer() {
   return (
     <div className={styles.container}>

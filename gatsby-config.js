@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+const { faFontAwesomeLogoFull } = require("@fortawesome/free-solid-svg-icons")
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -13,19 +15,29 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ricky Thai`,
+        short_name: `Ricky Thai`,
+        start_url: `/`,
+        background_color: `#212121`,
+        theme_color: `#212121`,
+        display: `standalone`,
+        icon: `src/images/logo.png`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-fontawesome-css`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
