@@ -45,11 +45,13 @@
 }
 
 .icon {
-  color: var(--slate-light);
+  width: 50px;
+  height: 50px;
+  fill: var(--slate-light);
   cursor: pointer;
-  transition: color 0.3s;
+  transition: all 0.3s;
 }
 .icon:hover {
-  color: var(--orange);
-  transition: color 0.3s;
+  fill: var(--orange);
+  transition: all 0.3s;
 }

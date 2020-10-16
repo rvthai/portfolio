@@ -3,9 +3,8 @@ import styles from "styles/project.module.css"
 import sr from "utils/scroll-reveal"
 import Img from "gatsby-image"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import Github from "images/icons/github.svg"
+import ExternalLink from "images/icons/external-link.svg"
 
 function Project(props) {
   const revealContainer = useRef(null)
@@ -43,13 +42,10 @@ function Project(props) {
           </div>
           <div className={styles.icons}>
             <a href={props.github} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon className={styles.icon} icon={faGithub} />
+              <Github className={styles.icon} />
             </a>
             <a href={props.link} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon
-                className={styles.icon}
-                icon={faExternalLinkAlt}
-              />
+              <ExternalLink className={styles.icon} />
             </a>
           </div>
         </div>
@@ -73,13 +69,10 @@ function Project(props) {
           </div>
           <div className={styles.inverseicons}>
             <a href={props.github} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon className={styles.inverseicon} icon={faGithub} />
+              <Github className={styles.inverseicon} />
             </a>
             <a href={props.link} target="_blank" rel="noreferrer">
-              <FontAwesomeIcon
-                className={styles.inverseicon}
-                icon={faExternalLinkAlt}
-              />
+              <ExternalLink className={styles.inverseicon} />
             </a>
           </div>
         </div>

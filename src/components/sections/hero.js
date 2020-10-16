@@ -3,10 +3,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import styles from "styles/hero.module.css"
 import sr from "utils/scroll-reveal"
 
-// Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import Envelope from "images/icons/envelope.svg"
+import LinkedIn from "images/icons/linkedin.svg"
+import Github from "images/icons/github.svg"
 
 function Hero() {
   const data = useStaticQuery(
@@ -59,25 +58,17 @@ function Hero() {
       </p>
       <div className={styles.icons} ref={revealIcons}>
         <a href="mailto:rickyvanthai@gmail.com">
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={faEnvelope}
-            size="3x"
-          />
+          <Envelope className={styles.icon} />
         </a>
         <a
           href="https://www.linkedin.com/in/rickyvthai/"
           target="_blank"
           rel="noreferrer"
         >
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon={faLinkedin}
-            size="3x"
-          />
+          <LinkedIn className={styles.icon} />
         </a>
         <a href="https://github.com/rvthai" target="_blank" rel="noreferrer">
-          <FontAwesomeIcon className={styles.icon} icon={faGithub} size="3x" />
+          <Github className={styles.icon} />
         </a>
       </div>
     </div>

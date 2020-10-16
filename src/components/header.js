@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import styles from "styles/header.module.css"
 import { CSSTransition } from "react-transition-group"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
+import Hamburger from "images/icons/bars.svg"
+import Cross from "images/icons/cross.svg"
 
 import Logo from "images/logo.png"
 
@@ -68,21 +68,11 @@ function Header() {
             Resume
           </a>
         </div>
-        <FontAwesomeIcon
-          className={styles.hamburger}
-          icon={faBars}
-          size="2x"
-          onClick={slider}
-        />
+        <Hamburger className={styles.hamburger} onClick={slider} />
       </div>
       <CSSTransition in={slide} timeout={300} unmountOnExit classNames="drawer">
         <div className={styles.drawera}>
-          <FontAwesomeIcon
-            className={styles.cross}
-            icon={faTimes}
-            size="2x"
-            onClick={slider}
-          />
+          <Cross className={styles.cross} onClick={slider} />
           <div className={styles.vlinks}>
             {links.map((link, index) => (
               <Link className={styles.vlink} key={index} to={`/#${link}`}>

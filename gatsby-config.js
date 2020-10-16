@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-const { faFontAwesomeLogoFull } = require("@fortawesome/free-solid-svg-icons")
-
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -14,6 +12,14 @@ module.exports = {
     author: `Ricky Thai`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

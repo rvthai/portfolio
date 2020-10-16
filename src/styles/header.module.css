@@ -132,17 +132,22 @@
 }
 
 .hamburger {
+  width: 30px;
+  height: 30px;
   display: none;
-  color: var(--orange);
+  fill: var(--orange);
   cursor: pointer;
 }
 
 .cross {
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 0;
   right: 0;
-  color: var(--orange);
+  fill: var(--orange);
   margin: 1rem;
+  cursor: pointer;
 }
 
 .drawera {
