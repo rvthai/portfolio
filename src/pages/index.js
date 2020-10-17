@@ -1,4 +1,5 @@
 import React from "react"
+import SEO from "components/seo"
 
 // Components
 import Header from "../components/header"
@@ -12,6 +13,7 @@ import Footer from "../components/footer"
 function IndexPage() {
   return (
     <div>
+      <SEO />
       <Header />
       <div className="main">
         <Hero />

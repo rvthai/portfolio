@@ -8,8 +8,9 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Ricky Thai`,
-    description: `Ricky Thai's Portfolio`,
+    description: `I am a software engineer based in San Jose, CA focused on building things for the web and bringing them to life on the internet.`,
     author: `Ricky Thai`,
+    siteUrl: "https://rickythai.com", // No trailing slash allowed!
   },
   plugins: [
     {
@@ -33,6 +34,8 @@ module.exports = {
         icon: `src/images/logo.png`,
       },
     },
+    `gatsby-plugin-offline`, // should be put after manifest
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,7 +43,6 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
@@ -54,5 +56,11 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-180738875-1",
+      },
+    },
   ],
 }
