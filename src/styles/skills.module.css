@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.heading {
+  margin-bottom: 1rem;
+}
+
 ul {
   list-style: none;
   list-style-position: inside;

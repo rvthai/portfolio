@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from "styles/about.module.css"
 import sr from "utils/scroll-reveal"
 
-import Skills from "components/skills"
+// Components
 import SectionHeader from "components/section-header"
+import Skills from "components/skills"
 
+// Images
 import Me from "images/me.png"
 
 function About() {
@@ -13,7 +15,7 @@ function About() {
     graphql`
       query {
         about: allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "/about/" } }
+          filter: { fileAbsolutePath: { regex: "content/about/" } }
         ) {
           edges {
             node {
@@ -22,6 +24,8 @@ function About() {
                 paragraph1
                 paragraph2
                 paragraph3
+                skillset_1
+                skillset_2
               }
             }
           }
@@ -33,25 +37,22 @@ function About() {
   const aboutData = data.about.edges[0].node.frontmatter
 
   const heading = "About me"
-  const revealContent = useRef(null)
-  // useEffect(() => {
-  //   sr.reveal(revealContent.current, { ...sr.config, delay: 300 })
-  // }, [])
 
   return (
     <div id="about" className="section">
       <SectionHeader heading={heading} />
-      <div className={styles.content} {...sr} ref={revealContent}>
+      <div className={styles.content} {...sr}>
         <div className={styles.text}>
-          <p className="paragraph">{aboutData.paragraph1}</p>
-          <p className="paragraph">{aboutData.paragraph2}</p>
-          <p className="paragraph">{aboutData.paragraph3}</p>
-          <Skills />
+          <p className={styles.paragraph}>{aboutData.paragraph1}</p>
+          <p className={styles.paragraph}>{aboutData.paragraph2}</p>
+          <p className={styles.paragraph}>{aboutData.paragraph3}</p>
+          <Skills
+            skillset_1={aboutData.skillset_1}
+            skillset_2={aboutData.skillset_2}
+          />
         </div>
         <div className={styles.image}>
-          <div className={styles.wrapper}>
-            <img className={styles.me} src={Me} alt="me" />
-          </div>
+          <img className={styles.me} src={Me} alt="me" />
         </div>
       </div>
     </div>

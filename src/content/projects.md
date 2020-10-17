@@ -19,7 +19,7 @@ projects:
     },
     {
       title: Python Password Safe,
-      description: Password manager CLI tool made with Python that allows users to store username and password pairs.,
+      description: Password manager CLI tool made with Python that allows users to store username and password entries.,
       tags: [Python, SQLite, PyPI],
       link: https://pypi.org/project/py-pwsafe/,
       github: https://github.com/rvthai/python-passwordsafe,

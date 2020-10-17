@@ -1,16 +1,10 @@
-import React, { useEffect, useRef } from "react"
-import sr from "utils/scroll-reveal"
+import React from "react"
 import styles from "styles/section-header.module.css"
+import sr from "utils/scroll-reveal"
 
 function SectionHeader(props) {
-  const revealContainer = useRef(null)
-
-  // useEffect(() => {
-  //   sr.reveal(revealContainer.current, { ...sr.config, delay: 150 })
-  // }, [])
-
   return (
-    <div className={styles.container} {...sr} ref={revealContainer}>
+    <div className={styles.container} {...sr}>
       <p className={styles.heading}>
         <span className={styles.anchor}>#</span> {props.heading}
       </p>

@@ -41,7 +41,7 @@
   --fs-xl: 18px;
 }
 
-/* Rules */
+/* Global CSS Styles */
 * {
   margin: 0;
   padding: 0;
@@ -71,11 +71,6 @@ body {
   padding: 150px 0;
 }
 
-.paragraph {
-  color: var(--slate-light);
-  margin-bottom: 1rem;
-}
-
 /* CSS Transitions */
 .drawer-enter {
   transform: translateX(100%);
@@ -92,7 +87,7 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Media Queries for responsiveness */
+/* Mobile Responsive */
 @media screen and (max-width: 1080px) {
   .main {
     padding: 0px 100px;

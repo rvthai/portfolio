@@ -8,10 +8,6 @@ import Job from "components/job"
 import ArrowButton from "components/arrow-button"
 
 function Work() {
-  const heading = "Where I've Worked"
-  const label = "View my resume"
-  const href = "/resume.pdf"
-
   const data = useStaticQuery(
     graphql`
       query {
@@ -33,7 +29,14 @@ function Work() {
       }
     `
   )
+
   const workData = data.work.edges[0].node.frontmatter.jobs
+
+  const heading = "Where I've Worked"
+
+  // Props for ArrowButton component
+  const label = "View my resume"
+  const href = "/resume.pdf"
 
   return (
     <div id="work" className="section">

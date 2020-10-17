@@ -8,10 +8,6 @@ import Project from "components/project"
 import ArrowButton from "components/arrow-button"
 
 function Projects() {
-  const heading = "Some things I've built"
-  const label = "View my github"
-  const href = "https://github.com/rvthai"
-
   const data = useStaticQuery(
     graphql`
       query {
@@ -43,7 +39,14 @@ function Projects() {
       }
     `
   )
+
   const projectsData = data.projects.edges[0].node.frontmatter.projects
+
+  const heading = "Some things I've built"
+
+  // Props for ArrowButton component
+  const label = "View my github"
+  const href = "https://github.com/rvthai"
 
   return (
     <div id="projects" className="section">
@@ -53,6 +56,7 @@ function Projects() {
           <Project
             key={index}
             index={index}
+            total={projectsData.length}
             title={project.title}
             description={project.description}
             tags={project.tags}

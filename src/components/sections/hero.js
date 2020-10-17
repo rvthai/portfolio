@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from "styles/hero.module.css"
 import sr from "utils/scroll-reveal"
 
+// Icons
 import Envelope from "images/icons/envelope.svg"
 import LinkedIn from "images/icons/linkedin.svg"
 import Github from "images/icons/github.svg"
@@ -12,7 +13,7 @@ function Hero() {
     graphql`
       query {
         hero: allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "/hero/" } }
+          filter: { fileAbsolutePath: { regex: "content/hero/" } }
         ) {
           edges {
             node {
@@ -31,37 +32,22 @@ function Hero() {
   )
 
   const heroData = data.hero.edges[0].node.frontmatter
-  const revealTagline = useRef(null)
-  const revealHeadings = useRef(null)
-  const revealSubheading = useRef(null)
-  const revealIcons = useRef(null)
-  // useEffect(() => {
-  //   sr.reveal(revealTagline.current, { ...sr.config, delay: 150 })
-  //   sr.reveal(revealHeadings.current, { ...sr.config, delay: 300 })
-  //   sr.reveal(revealSubheading.current, { ...sr.config, delay: 450 })
-  //   sr.reveal(revealIcons.current, { ...sr.config, delay: 600 })
-  // }, [])
-  const dataAttr = {
-    "data-sal": "slide-down",
-    "data-sal-delay": "200",
-    "data-sal-duration": "1000",
-    "data-sal-easing": "ease",
-  }
+
   return (
     <div id="hero" className={styles.container}>
-      <p className={styles.tagline} {...sr} ref={revealTagline}>
+      <p className={styles.tagline} {...sr}>
         {heroData.tagline}
       </p>
-      <div className={styles.headings} {...sr} ref={revealHeadings}>
+      <div className={styles.headings} {...sr}>
         <p className={styles.heading}>{heroData.heading1}</p>
         <p className={`${styles.heading} ${styles.slate}`}>
           {heroData.heading2}
         </p>
       </div>
-      <p className={styles.subheading} {...sr} ref={revealSubheading}>
+      <p className={styles.subheading} {...sr}>
         {heroData.subheading}
       </p>
-      <div className={styles.icons} {...sr} ref={revealIcons}>
+      <div className={styles.icons} {...sr}>
         <a href="mailto:rickyvanthai@gmail.com">
           <Envelope className={styles.icon} />
         </a>

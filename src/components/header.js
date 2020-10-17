@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react"
 import { CSSTransition } from "react-transition-group"
-import { Link } from "gatsby"
+import { Link, broswerHistory } from "gatsby"
 import styles from "styles/header.module.css"
 
+// Components
+import Drawer from "components/drawer"
+
 // Images and Icons
-import Hamburger from "images/icons/bars.svg"
-import Cross from "images/icons/cross.svg"
 import Logo from "images/logo.png"
+import Hamburger from "images/icons/bars.svg"
 
 function Header() {
-  const [slide, setSlide] = useState(false)
+  const [showDrawer, setShowDrawer] = useState(false)
   const [showOverlay, setShowOverlay] = useState(false)
 
   useEffect(() => {
@@ -33,29 +35,31 @@ function Header() {
     }
   }, [])
 
-  const slider = () => {
-    if (slide) {
-      setShowOverlay(false)
+  const toggleDrawer = () => {
+    if (showDrawer) {
       document.body.style.overflow = "auto"
-      setSlide(false)
+      setShowOverlay(false)
+      setShowDrawer(false)
     } else {
-      setShowOverlay(true)
       document.body.style.overflow = "hidden"
-      setSlide(true)
+      setShowOverlay(true)
+      setShowDrawer(true)
     }
   }
+
+  const handleLogoClick = () => {
+    broswerHistory.push("/")
+  }
+
   const links = ["about", "work", "projects", "contact"]
 
   return (
     <div id="header" className={styles.container}>
-      {showOverlay ? <div onClick={slider} className={styles.overlay} /> : null}
-      <div id="navbar" className={styles.navbar}>
-        <Link
-          className={styles.logo}
-          to="/"
-          onClick="window.location.reload()"
-          aria-label="home"
-        >
+      {showOverlay ? (
+        <div onClick={toggleDrawer} className={styles.overlay} />
+      ) : null}
+      <div className={styles.navbar}>
+        <Link className={styles.logo} onClick={handleLogoClick} to="/">
           <img src={Logo} alt="logo" width="35" />
         </Link>
         <div className={styles.links}>
@@ -68,22 +72,16 @@ function Header() {
             Resume
           </a>
         </div>
-        <Hamburger className={styles.hamburger} onClick={slider} />
+        <Hamburger className={styles.hamburger} onClick={toggleDrawer} />
       </div>
-      <CSSTransition in={slide} timeout={300} unmountOnExit classNames="drawer">
-        <div className={styles.drawera}>
-          <Cross className={styles.cross} onClick={slider} />
-          <div className={styles.vlinks}>
-            {links.map((link, index) => (
-              <Link className={styles.vlink} key={index} to={`/#${link}`}>
-                {link}
-              </Link>
-            ))}
-            <a className={styles.vresume} href="/resume.pdf" target="_blank">
-              Resume
-            </a>
-          </div>
-        </div>
+
+      <CSSTransition
+        in={showDrawer}
+        timeout={300}
+        unmountOnExit
+        classNames="drawer"
+      >
+        <Drawer links={links} toggleDrawer={toggleDrawer} />
       </CSSTransition>
     </div>
   )

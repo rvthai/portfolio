@@ -1,6 +1,4 @@
 .container {
-  /* display: flex;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
@@ -19,29 +17,30 @@
   width: 100%;
   height: auto;
 }
-
 .inversepic {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.tagline {
-  color: var(--orange);
-  font-family: var(--oxygen-mono);
-  font-size: var(--fs-xs);
+  order: 2;
 }
 
 .text {
   display: flex;
   flex-direction: column;
   align-self: center;
-  /* max-width: 375px; */
   text-align: right;
 }
+.inversetext {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: left;
+}
 
-.description {
-  margin: 15px 0 25px 0;
+.tagline {
+  color: var(--orange);
+  font-family: var(--oxygen-mono);
+  font-size: var(--fs-xs);
 }
 
 .title {
@@ -51,85 +50,74 @@
   line-height: 2;
 }
 
+.description {
+  margin: 15px 0 25px 0;
+}
+
 .tags {
   display: flex;
   margin-bottom: 25px;
   align-self: flex-end;
 }
-
-.tag {
-  border: solid 1px var(--orange);
-  border-radius: 2px;
-  padding: 5px 10px;
-  color: var(--orange);
-  font-family: "Oxygen Mono";
-  font-size: 10px;
-  margin-left: 1rem;
-}
-
-.icons {
-  display: inline-flex;
-  align-self: flex-end;
-}
-
-.icon {
-  fill: var(--slate-light);
-  cursor: pointer;
-  transition: all 0.3s;
-  margin-left: 1.5rem;
-  width: 25px;
-  height: 25px;
-  transition: all 0.3s;
-}
-
-.icon:hover {
-  fill: var(--orange);
-  transition: all 0.3s;
-}
-
-.inversetext {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  /* max-width: 375px; */
-  text-align: left;
-}
-
 .inversetags {
   display: flex;
   margin-bottom: 25px;
   align-self: flex-start;
 }
 
-.inversetag {
-  border: solid 1px var(--orange);
-  border-radius: 2px;
-  padding: 5px 10px;
+.tag {
   color: var(--orange);
   font-family: "Oxygen Mono";
-  font-size: 10px;
+  font-size: var(--fs-xs);
+  border: solid 1px var(--orange);
+  border-radius: 2px;
+  margin-left: 1rem;
+  padding: 5px 10px;
+}
+.inversetag {
+  color: var(--orange);
+  font-family: "Oxygen Mono";
+  font-size: var(--fs-xs);
+  border: solid 1px var(--orange);
+  border-radius: 2px;
   margin-right: 1rem;
+  padding: 5px 10px;
 }
 
+.icons {
+  display: inline-flex;
+  align-self: flex-end;
+}
 .inverseicons {
   display: inline-flex;
 }
 
-.inverseicon {
+.icon {
   fill: var(--slate-light);
-  cursor: pointer;
-  transition: all 0.3s;
-  margin-right: 1.5rem;
   width: 25px;
   height: 25px;
-  transition: all 0.3s;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  transition: fill 0.3s;
 }
-
+.icon:hover {
+  fill: var(--orange);
+  transition: fill 0.3s;
+}
+.inverseicon {
+  fill: var(--slate-light);
+  width: 25px;
+  height: 25px;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
 .inverseicon:hover {
   fill: var(--orange);
-  transition: all 0.3s;
+  transition: fill 0.3s;
 }
 
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
   .container,
   .lastcontainer {

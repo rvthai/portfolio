@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styles from "styles/contact.module.css"
 import sr from "utils/scroll-reveal"
@@ -26,29 +26,17 @@ function Contact() {
 
   const contactData = data.contact.edges[0].node.frontmatter
 
-  const revealHeader = useRef(null)
-  const revealHeading = useRef(null)
-  const revealSubheading = useRef(null)
-  const revealButton = useRef(null)
-
-  // useEffect(() => {
-  //   sr.reveal(revealHeader.current, { ...sr.config, delay: 150 })
-  //   sr.reveal(revealHeading.current, { ...sr.config, delay: 300 })
-  //   sr.reveal(revealSubheading.current, { ...sr.config, delay: 450 })
-  //   sr.reveal(revealButton.current, { ...sr.config, delay: 600 })
-  // }, [])
-
   return (
     <div id="contact" className="section">
       <div className={styles.container}>
         <div className={styles.content}>
-          <p className={styles.header} {...sr} ref={revealHeader}>
+          <p className={styles.header} {...sr}>
             Contact Me
           </p>
-          <p className={styles.heading} {...sr} ref={revealHeading}>
+          <p className={styles.heading} {...sr}>
             {contactData.heading}
           </p>
-          <p className="paragraph" {...sr} ref={revealSubheading}>
+          <p className={styles.paragraph} {...sr}>
             {contactData.subheading}
           </p>
         </div>
@@ -56,7 +44,6 @@ function Contact() {
           className={styles.button}
           href="mailto:rickyvanthai@gmail.com"
           {...sr}
-          ref={revealButton}
         >
           {contactData.button}
         </a>

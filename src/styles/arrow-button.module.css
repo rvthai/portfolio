@@ -5,25 +5,25 @@
   letter-spacing: 0.1rem;
   text-decoration: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .label {
   color: var(--white);
   margin-right: 0.5rem;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .arrow {
+  fill: var(--orange);
   width: 20px;
   height: 20px;
-  fill: var(--orange);
-  transition: transform 0.3s;
+  transition: all 0.3s;
 }
 
 .link:hover .label {
   letter-spacing: 0.2rem;
-  fill: var(--orange);
+  color: var(--orange);
   transition: all 0.3s;
 }
 .link:hover .arrow {

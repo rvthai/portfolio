@@ -13,15 +13,16 @@
   margin-right: 1rem;
 }
 
+.anchor {
+  color: var(--orange);
+}
+
 .hr {
   border-bottom: solid 1px var(--slate-light);
   width: 200px;
 }
 
-.anchor {
-  color: var(--orange);
-}
-
+/* Mobile Responsive */
 @media screen and (max-width: 768px) {
   .hr {
     width: 100%;

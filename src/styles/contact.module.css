@@ -23,20 +23,24 @@
   margin: 1rem auto;
 }
 
+.paragraph {
+  margin-bottom: 1rem;
+}
+
 .button {
   color: var(--orange);
-  font-family: var(--apex-light);
-  letter-spacing: 0.2rem;
-  font-size: 14px;
-  padding: 20px 40px;
-  border-radius: 2px;
-  border: solid 1px var(--orange);
-  outline: none;
   background: none;
-  cursor: pointer;
-  transition: all 0.3s;
+  font-family: var(--apex-light);
+  font-size: var(--fs-md);
+  letter-spacing: 0.2rem;
   text-decoration: none;
+  border: solid 1px var(--orange);
+  border-radius: 2px;
+  outline: none;
   margin: 1rem;
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 .button:hover {
   background: rgba(241, 188, 82, 0.2);

@@ -4,4 +4,7 @@ paragraph1: Hello! My name is Ricky, a software engineer based in San Jose, CA. 
 paragraph2: Shortly after I graduated, I discovered a passion for front-end development. I enjoy synthesizing visual aspects with logic to develop applications that produce enjoyable and functional experiences for people.
 
 paragraph3: When I'm not coding, you can find me shooting hoops on the basketball court or making music in my room!
+
+skillset_1: ["JavaScript (ES6+)", "React", "Node.js"]
+skillset_2: ["HTML & CSS", "Python", "GraphQL"]
 ---

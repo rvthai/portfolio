@@ -1,22 +1,22 @@
 import React from "react"
 import styles from "styles/skills.module.css"
 
-function Skills() {
+function Skills(props) {
   return (
-    <div id="skills">
-      <p className="paragraph">
+    <div>
+      <p className={styles.heading}>
         Some tools and technologies I've been working with are:
       </p>
       <div className={styles.lists}>
         <ul>
-          <li>JavaScript (ES6+)</li>
-          <li>React</li>
-          <li>Node.js</li>
+          {props.skillset_1.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
         </ul>
         <ul>
-          <li>HTML & CSS</li>
-          <li>Python</li>
-          <li>GraphQL</li>
+          {props.skillset_2.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
         </ul>
       </div>
     </div>
