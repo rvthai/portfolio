@@ -5,23 +5,13 @@
  */
 
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: `Ricky Thai`,
     description: `I am a software engineer based in San Jose, CA focused on building things for the web and bringing them to life on the internet.`,
     author: `Ricky Thai`,
-    siteUrl: "https://rickythai.com", // No trailing slash allowed!
+    siteUrl: "https://rickythai.com",
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /icons/,
-        },
-      },
-    },
-    `gatsby-plugin-scroll-reveal`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -31,10 +21,10 @@ module.exports = {
         background_color: `#212121`,
         theme_color: `#212121`,
         display: `standalone`,
-        icon: `src/images/logo.png`,
+        icon: `src/images/favicon.png`,
       },
     },
-    `gatsby-plugin-offline`, // should be put after manifest
+    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -43,10 +33,6 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-resolve-src`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-transformer-remark`,
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -54,8 +40,20 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
+    `gatsby-plugin-resolve-src`,
+    `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
