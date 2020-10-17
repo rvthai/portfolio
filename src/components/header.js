@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react"
+import { CSSTransition } from "react-transition-group"
 import { Link } from "gatsby"
 import styles from "styles/header.module.css"
-import { CSSTransition } from "react-transition-group"
 
+// Images and Icons
 import Hamburger from "images/icons/bars.svg"
 import Cross from "images/icons/cross.svg"
-
 import Logo from "images/logo.png"
 
 function Header() {

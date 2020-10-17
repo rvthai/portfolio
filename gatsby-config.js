@@ -37,7 +37,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images/`,
+        path: `${__dirname}/src/images/projects`,
       },
     },
     {
@@ -50,7 +50,6 @@ module.exports = {
     },
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-scroll-reveal`,
-    `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

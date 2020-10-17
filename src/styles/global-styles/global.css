@@ -1,30 +1,26 @@
 /* Fonts */
 @font-face {
   font-family: "Apex Bold";
-  src: url(../fonts/Apex-Mk3-Bold.otf);
+  src: url(../../fonts/Apex-Mk3-Bold.otf);
 }
-
 @font-face {
   font-family: "Apex Light";
-  src: url(../fonts/Apex-Mk3-Light.otf);
+  src: url(../../fonts/Apex-Mk3-Light.otf);
 }
-
 @font-face {
   font-family: "BeVietnam Bold";
-  src: url(../fonts/BeVietnam-Bold.ttf);
+  src: url(../../fonts/BeVietnam-Bold.ttf);
 }
-
 @font-face {
   font-family: "BeVietnam Light";
-  src: url(../fonts/BeVietnam-Light.ttf);
+  src: url(../../fonts/BeVietnam-Light.ttf);
 }
-
 @font-face {
   font-family: "Oxygen Mono";
-  src: url(../fonts/OxygenMono-Regular.ttf);
+  src: url(../../fonts/OxygenMono-Regular.ttf);
 }
 
-/* Variables */
+/* Global CSS Variables */
 :root {
   --gunmetal: #212121;
   --orange: #f1bb52;
@@ -80,6 +76,23 @@ body {
   margin-bottom: 1rem;
 }
 
+/* CSS Transitions */
+.drawer-enter {
+  transform: translateX(100%);
+}
+.drawer-enter-active {
+  transform: translateX(0%);
+  transition: transform 0.3s ease-in-out;
+}
+.drawer-exit {
+  transform: translateX(0%);
+}
+.drawer-exit-active {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Media Queries for responsiveness */
 @media screen and (max-width: 1080px) {
   .main {
     padding: 0px 100px;
@@ -94,19 +107,4 @@ body {
   .main {
     padding: 0px 25px;
   }
-}
-
-.drawer-enter {
-  transform: translateX(100%);
-}
-.drawer-enter-active {
-  transform: translateX(0%);
-  transition: transform 0.3s ease-in-out;
-}
-.drawer-exit {
-  transform: translateX(0%);
-}
-.drawer-exit-active {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
 }
