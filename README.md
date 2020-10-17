@@ -4,8 +4,9 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7db468ee-d9c0-4552-97c5-4724734612bd/deploy-status)](https://app.netlify.com/sites/rvthai/deploys)
 
-This is my personal website built with [Gatsby](https://www.gatsbyjs.com/) and deployed with [Netlify](https://www.netlify.com/).
-\nhttps://rvthai.com/
+This is my personal website built with [Gatsby](https://www.gatsbyjs.com/) and deployed with [Netlify](https://www.netlify.com/). \
+
+https://rvthai.com/
 
 ## Installation & Set Up
 
