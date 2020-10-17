@@ -123,12 +123,14 @@
   .lastcontainer {
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
 
   .pic,
   .inversepic {
     order: -1;
     align-self: center;
+    margin-bottom: 50px;
   }
 
   .text {

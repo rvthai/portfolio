@@ -40,11 +40,7 @@ function Contact() {
             {contactData.subheading}
           </p>
         </div>
-        <a
-          className={styles.button}
-          href="mailto:rickyvanthai@gmail.com"
-          {...sr}
-        >
+        <a className={styles.button} href="mailto:rickyvanthai@gmail.com">
           {contactData.button}
         </a>
       </div>

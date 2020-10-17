@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { CSSTransition } from "react-transition-group"
-import { Link, broswerHistory } from "gatsby"
+import { Link } from "gatsby"
 import styles from "styles/header.module.css"
 
 // Components
@@ -47,10 +47,6 @@ function Header() {
     }
   }
 
-  const handleLogoClick = () => {
-    broswerHistory.push("/")
-  }
-
   const links = ["about", "work", "projects", "contact"]
 
   return (
@@ -59,9 +55,9 @@ function Header() {
         <div onClick={toggleDrawer} className={styles.overlay} />
       ) : null}
       <div className={styles.navbar}>
-        <Link className={styles.logo} onClick={handleLogoClick} to="/">
+        <a className={styles.logo} href="/">
           <img src={Logo} alt="logo" width="35" />
-        </Link>
+        </a>
         <div className={styles.links}>
           {links.map((link, index) => (
             <Link className={styles.link} key={index} to={`/#${link}`}>

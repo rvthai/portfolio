@@ -13,7 +13,7 @@ function PageNotFound(props) {
         <div className={styles.container}>
           <p className={styles.heading}>404</p>
           <p className={styles.subheading}>Page Not Found</p>
-          <a className={styles.button} href="\">
+          <a className={styles.button} href="/">
             Go home
           </a>
         </div>

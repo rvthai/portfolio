@@ -40,9 +40,9 @@
   margin: 1rem;
   padding: 20px 40px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s !important;
 }
 .button:hover {
   background: rgba(241, 188, 82, 0.2);
-  transition: background 0.3s;
+  transition: background 0.3s !important;
 }
